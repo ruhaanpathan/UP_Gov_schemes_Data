@@ -1,0 +1,611 @@
+
+══════════════════════════════════════════════════════════════════════
+  UP GOVERNMENT SCHEMES — MASTER ANALYSIS REPORT (2016-2026)
+══════════════════════════════════════════════════════════════════════
+
+📊 OVERVIEW
+   Total Schemes Analyzed     : 24
+   Total Beneficiaries        : 678.8 Lakh (6.79 Crore)
+   Total Budget Deployed      : ₹151,976 Crore (₹1.52 Lakh Crore)
+   Sectors Covered            : 7
+   Average Impact Score       : 6.8/10
+   Average Reach              : 54%
+
+══════════════════════════════════════════════════════════════════════
+  SECTOR-WISE BREAKDOWN
+══════════════════════════════════════════════════════════════════════
+
+  🏷️  Education
+      Schemes: 3.0 | Beneficiaries: 240.1L | Budget: ₹10,500Cr
+      Avg Impact: 8.3/10 | Avg Reach: 80%
+
+  🏷️  Social Security
+      Schemes: 4.0 | Beneficiaries: 102.0L | Budget: ₹13,140Cr
+      Avg Impact: 6.6/10 | Avg Reach: 57%
+
+  🏷️  Agriculture
+      Schemes: 4.0 | Beneficiaries: 97.5L | Budget: ₹37,800Cr
+      Avg Impact: 4.9/10 | Avg Reach: 32%
+
+  🏷️  Women & Girl Child
+      Schemes: 5.0 | Beneficiaries: 82.8L | Budget: ₹5,346Cr
+      Avg Impact: 7.4/10 | Avg Reach: 54%
+
+  🏷️  Health
+      Schemes: 2.0 | Beneficiaries: 55.0L | Budget: ₹8,240Cr
+      Avg Impact: 7.5/10 | Avg Reach: 58%
+
+  🏷️  Housing
+      Schemes: 2.0 | Beneficiaries: 53.4L | Budget: ₹70,000Cr
+      Avg Impact: 8.8/10 | Avg Reach: 85%
+
+  🏷️  Employment & Industry
+      Schemes: 4.0 | Beneficiaries: 48.0L | Budget: ₹6,950Cr
+      Avg Impact: 5.6/10 | Avg Reach: 36%
+
+══════════════════════════════════════════════════════════════════════
+  TOP 10 SCHEMES BY BENEFICIARIES
+══════════════════════════════════════════════════════════════════════
+   1. ✅ Free School Bag & Uniform Scheme
+      160.0 Lakh | ₹2,000 Cr | Education
+   2. ⚠️ UP Kisan Rin Mochan Yojana (Loan Waiver)
+      86.0 Lakh | ₹36,000 Cr | Agriculture
+   3. ✅ Pre-Matric & Post-Matric Scholarship
+      80.0 Lakh | ₹8,000 Cr | Education
+   4. ✅ Old Age Pension Scheme (SSPY)
+      56.0 Lakh | ₹6,700 Cr | Social Security
+   5. ✅ Mission Shakti
+      50.0 Lakh | ₹3,146 Cr | Women & Girl Child
+   6. ✅ Ayushman Bharat PMJAY (UP Implementation)
+      45.0 Lakh | ₹7,040 Cr | Health
+   7. ✅ PMAY-Gramin (Rural Housing, UP)
+      36.4 Lakh | ₹45,000 Cr | Housing
+   8. ✅ Widow Pension Scheme (Nirashrit Mahila)
+      29.0 Lakh | ₹3,500 Cr | Social Security
+   9. ✅ Mukhyamantri Kanya Sumangala Yojana
+      26.8 Lakh | ₹1,200 Cr | Women & Girl Child
+  10. ✅ One District One Product (ODOP)
+      25.0 Lakh | ₹6,000 Cr | Employment & Industry
+
+══════════════════════════════════════════════════════════════════════
+  VERDICT ANALYSIS — WHAT WORKED vs WHAT FLOPPED
+══════════════════════════════════════════════════════════════════════
+
+  🏆 MAJOR SUCCESS (4 schemes)
+      • One District One Product (ODOP) — 25.0L beneficiaries, Score 9.0/10
+      • Atal Residential Schools (Atal Awasiya Vidyalaya) — 0.1L beneficiaries, Score 9.5/10
+      • Ayushman Bharat PMJAY (UP Implementation) — 45.0L beneficiaries, Score 9.0/10
+      • PMAY-Gramin (Rural Housing, UP) — 36.4L beneficiaries, Score 9.5/10
+
+  ✅ SUCCESS (8 schemes)
+      • Mukhyamantri Kanya Sumangala Yojana — 26.8L beneficiaries, Score 8.5/10
+      • Mukhyamantri Samuhik Vivah Yojana — 3.5L beneficiaries, Score 7.5/10
+      • Mission Shakti — 50.0L beneficiaries, Score 8.0/10
+      • Old Age Pension Scheme (SSPY) — 56.0L beneficiaries, Score 8.0/10
+      • Pre-Matric & Post-Matric Scholarship — 80.0L beneficiaries, Score 8.0/10
+      • Free School Bag & Uniform Scheme — 160.0L beneficiaries, Score 7.5/10
+      • PMAY-Urban (Urban Housing, UP) — 17.0L beneficiaries, Score 8.0/10
+      • BC Sakhi (Banking Correspondent) — 0.5L beneficiaries, Score 8.0/10
+
+  👍 MODERATE SUCCESS (4 schemes)
+      • Widow Pension Scheme (Nirashrit Mahila) — 29.0L beneficiaries, Score 7.0/10
+      • Divyang Pension Scheme — 12.0L beneficiaries, Score 6.5/10
+      • Mukhyamantri Krishak Durghatna Kalyan Yojana — 2.0L beneficiaries, Score 6.0/10
+      • Mukhyamantri Jan Arogya Yojana — 10.0L beneficiaries, Score 6.0/10
+
+  ⚠️ MIXED (5 schemes)
+      • Rashtriya Parivarik Laabh Yojana — 5.0L beneficiaries, Score 5.0/10
+      • UP Kisan Rin Mochan Yojana (Loan Waiver) — 86.0L beneficiaries, Score 5.5/10
+      • Kisan Asaan Kist Yojana — 8.0L beneficiaries, Score 4.5/10
+      • Sevayojan Portal (Employment Exchange) — 15.0L beneficiaries, Score 4.5/10
+      • CM Apprenticeship Promotion Scheme (CMAPS) — 3.0L beneficiaries, Score 5.0/10
+
+  ❌ UNDERPERFORMED (2 schemes)
+      • Kisan Uday Yojana (Solar Pumps) — 1.5L beneficiaries, Score 3.5/10
+      • Kaushal Satrang / YUVA Hub — 5.0L beneficiaries, Score 4.0/10
+
+  🕐 TOO EARLY TO JUDGE (1 schemes)
+      • Mahila Samarthya Yojana — 2.0L beneficiaries, Score 5.0/10
+
+══════════════════════════════════════════════════════════════════════
+  DETAILED SCHEME ANALYSIS
+══════════════════════════════════════════════════════════════════════
+
+  ────────────────────────────────────────────────────────────
+  🏆 PMAY-Gramin (Rural Housing, UP) (PMAYG)
+  ────────────────────────────────────────────────────────────
+  Sector: Housing | Launched: 2016 | Verdict: Major Success
+  Beneficiaries: 36.4 Lakh | Budget: ₹45,000 Cr
+  Per-Person Benefit: ₹1.20-1.30 lakh for pucca house construction
+  Impact Score: 9.5/10 | Reach: 95%
+  Target Group: Rural poor without pucca houses
+  Description: Providing pucca houses with toilet, electricity & gas connections to rural poor families.
+  ✓ Achievements:
+      • 36.85 lakh houses targeted
+      • 36.56 lakh houses sanctioned
+      • 36.38 lakh houses completed
+      • 98.7% completion rate
+      • Includes toilet, electricity, LPG connections
+  ✗ Challenges:
+      • Quality of construction varies
+      • Some delays in fund release
+
+  ────────────────────────────────────────────────────────────
+  🏆 Atal Residential Schools (Atal Awasiya Vidyalaya) (ARS)
+  ────────────────────────────────────────────────────────────
+  Sector: Education | Launched: 2021 | Verdict: Major Success
+  Beneficiaries: 0.1 Lakh | Budget: ₹500 Cr
+  Per-Person Benefit: Free CBSE residential education + all expenses
+  Impact Score: 9.5/10 | Reach: 85%
+  Target Group: Children of construction workers & COVID orphans
+  Description: Free high-quality CBSE residential schools in every division for construction workers' children.
+  ✓ Achievements:
+      • 18 schools across all divisions
+      • 93.15% pass rate in first CBSE Class 10 batch (2026)
+      • 100% pass rate in Varanasi & Prayagraj schools
+      • 50:50 gender ratio maintained
+      • Smart classrooms, AI & drone tech labs
+      • 10,000+ students enrolled
+  ✗ Challenges:
+      • Limited capacity (only 18 schools)
+      • Needs scaling up
+
+  ────────────────────────────────────────────────────────────
+  🏆 One District One Product (ODOP) (ODOP)
+  ────────────────────────────────────────────────────────────
+  Sector: Employment & Industry | Launched: 2018 | Verdict: Major Success
+  Beneficiaries: 25.0 Lakh | Budget: ₹6,000 Cr
+  Per-Person Benefit: Toolkits, training, market access, loans
+  Impact Score: 9.0/10 | Reach: 80%
+  Target Group: Local artisans, MSME, craftspeople across 75 districts
+  Description: Flagship initiative promoting indigenous industries and local crafts in every district.
+  ✓ Achievements:
+      • ODOP exports reached ₹93,000 Cr by 2024
+      • 1.25 lakh modern toolkits distributed
+      • Projects worth ₹6,000 Cr sanctioned under Margin Money Scheme
+      • Budget increased from ₹307 Cr to ₹337 Cr (2025-26)
+      • International recognition and export growth
+  ✗ Challenges:
+      • Quality standardization needed
+      • Marketing support inconsistent across districts
+
+  ────────────────────────────────────────────────────────────
+  🏆 Ayushman Bharat PMJAY (UP Implementation) (AB)
+  ────────────────────────────────────────────────────────────
+  Sector: Health | Launched: 2018 | Verdict: Major Success
+  Beneficiaries: 45.0 Lakh | Budget: ₹7,040 Cr
+  Per-Person Benefit: ₹5 lakh health insurance/family/year
+  Impact Score: 9.0/10 | Reach: 82%
+  Target Group: Poor and vulnerable families
+  Description: Health insurance coverage of ₹5 lakh per family for secondary & tertiary care hospitalization.
+  ✓ Achievements:
+      • 5.11 Cr+ Ayushman cards issued in UP
+      • 45 lakh+ patients treated
+      • 5,669 hospitals empanelled (2,948 govt + 2,721 private)
+      • ₹7,040 Cr spent on treatments
+      • 6.98 lakh tertiary care patients (₹2,557 Cr)
+      • UP is #1 state in scheme implementation
+  ✗ Challenges:
+      • Some hospitals refuse Ayushman patients
+      • Claim settlement delays
+      • Fraud cases detected
+
+  ────────────────────────────────────────────────────────────
+  ✅ Mukhyamantri Kanya Sumangala Yojana (MKSY)
+  ────────────────────────────────────────────────────────────
+  Sector: Women & Girl Child | Launched: 2019 | Verdict: Success
+  Beneficiaries: 26.8 Lakh | Budget: ₹1,200 Cr
+  Per-Person Benefit: ₹25,000 (6 installments birth to graduation)
+  Impact Score: 8.5/10 | Reach: 72%
+  Target Group: Girl children from economically weaker families
+  Description: Financial assistance to girl children in 6 stages from birth to graduation to promote health, education & gender equality.
+  ✓ Achievements:
+      • 26.81 lakh girls benefited by 2026
+      • Amount increased from ₹15,000 to ₹25,000 in 2024-25
+      • 3-5 lakh new applicants annually after revision
+      • DBT directly to bank accounts
+  ✗ Challenges:
+      • Awareness gaps in remote areas
+      • Document verification delays
+
+  ────────────────────────────────────────────────────────────
+  ✅ Mission Shakti (MS)
+  ────────────────────────────────────────────────────────────
+  Sector: Women & Girl Child | Launched: 2020 | Verdict: Success
+  Beneficiaries: 50.0 Lakh | Budget: ₹3,146 Cr
+  Per-Person Benefit: Multi-program umbrella scheme
+  Impact Score: 8.0/10 | Reach: 60%
+  Target Group: All women and girls of UP
+  Description: Umbrella initiative for women safety, dignity & empowerment through multiple sub-schemes.
+  ✓ Achievements:
+      • 50,000+ BC Sakhis appointed for rural banking
+      • Pink toilets & Mission Shakti centres at police stations
+      • Self-defense training to lakhs of women
+      • Budget rose to ₹3,146 Cr in 2024-25
+  ✗ Challenges:
+      • Ground-level implementation varies by district
+      • Awareness in rural pockets
+
+  ────────────────────────────────────────────────────────────
+  ✅ Old Age Pension Scheme (SSPY) (OAP)
+  ────────────────────────────────────────────────────────────
+  Sector: Social Security | Launched: 2016 | Verdict: Success
+  Beneficiaries: 56.0 Lakh | Budget: ₹6,700 Cr
+  Per-Person Benefit: ₹1,000/month
+  Impact Score: 8.0/10 | Reach: 78%
+  Target Group: Citizens aged 60+ years
+  Description: Monthly financial assistance to eligible senior citizens through Aadhaar-based DBT.
+  ✓ Achievements:
+      • 55.99 lakh elderly beneficiaries in 2024-25
+      • Target raised to 67.50 lakh for 2025-26
+      • 1.77 lakh fake/deceased beneficiaries removed in 2024
+      • Aadhaar-based real-time authentication
+  ✗ Challenges:
+      • Pension amount still low for survival
+      • Delayed disbursements in some quarters
+
+  ────────────────────────────────────────────────────────────
+  ✅ Pre-Matric & Post-Matric Scholarship (SCHOL)
+  ────────────────────────────────────────────────────────────
+  Sector: Education | Launched: 2016 | Verdict: Success
+  Beneficiaries: 80.0 Lakh | Budget: ₹8,000 Cr
+  Per-Person Benefit: ₹3,000-₹15,000/year depending on level
+  Impact Score: 8.0/10 | Reach: 70%
+  Target Group: SC, OBC, Minority students
+  Description: Extensive scholarship programs for students from marginalized communities.
+  ✓ Achievements:
+      • ~80 lakh students benefited annually
+      • Covers tuition, maintenance & other fees
+      • Online portal for application & tracking
+  ✗ Challenges:
+      • Delayed disbursement common
+      • Verification process slow
+      • Some fake applications detected
+
+  ────────────────────────────────────────────────────────────
+  ✅ BC Sakhi (Banking Correspondent) (BCS)
+  ────────────────────────────────────────────────────────────
+  Sector: Women & Girl Child | Launched: 2020 | Verdict: Success
+  Beneficiaries: 0.5 Lakh | Budget: ₹200 Cr
+  Per-Person Benefit: ₹4,000/month + commission on transactions
+  Impact Score: 8.0/10 | Reach: 65%
+  Target Group: Rural women for doorstep banking services
+  Description: Empowering rural women to provide banking services at grassroots level.
+  ✓ Achievements:
+      • 50,000+ women appointed as BC Sakhis
+      • Doorstep banking in remote villages
+      • Financial inclusion of rural households
+      • Women earn ₹4,000/month + transaction commission
+  ✗ Challenges:
+      • Technology literacy gaps
+      • Network connectivity issues in villages
+
+  ────────────────────────────────────────────────────────────
+  ✅ PMAY-Urban (Urban Housing, UP) (PMAYU)
+  ────────────────────────────────────────────────────────────
+  Sector: Housing | Launched: 2016 | Verdict: Success
+  Beneficiaries: 17.0 Lakh | Budget: ₹25,000 Cr
+  Per-Person Benefit: ₹1.5-2.67 lakh subsidy for urban housing
+  Impact Score: 8.0/10 | Reach: 75%
+  Target Group: Urban poor and EWS/LIG families
+  Description: Housing for urban poor with interest subsidy and construction assistance.
+  ✓ Achievements:
+      • 21 lakh+ houses sanctioned
+      • 17 lakh houses completed and delivered
+      • Significant contribution to Housing For All mission
+  ✗ Challenges:
+      • Urban land availability issues
+      • Slower pace than rural component
+
+  ────────────────────────────────────────────────────────────
+  ✅ Mukhyamantri Samuhik Vivah Yojana (MSVY)
+  ────────────────────────────────────────────────────────────
+  Sector: Women & Girl Child | Launched: 2017 | Verdict: Success
+  Beneficiaries: 3.5 Lakh | Budget: ₹600 Cr
+  Per-Person Benefit: ₹51,000 per couple (increased over years)
+  Impact Score: 7.5/10 | Reach: 55%
+  Target Group: Economically weaker section brides
+  Description: Financial assistance for mass weddings covering expenses for brides from economically weaker sections.
+  ✓ Achievements:
+      • 3.5 lakh+ couples benefited
+      • Assistance increased from ₹35,000 to ₹51,000
+      • Reduced dowry burden on poor families
+  ✗ Challenges:
+      • Limited reach in urban areas
+      • Processing delays
+
+  ────────────────────────────────────────────────────────────
+  ✅ Free School Bag & Uniform Scheme (FSBU)
+  ────────────────────────────────────────────────────────────
+  Sector: Education | Launched: 2017 | Verdict: Success
+  Beneficiaries: 160.0 Lakh | Budget: ₹2,000 Cr
+  Per-Person Benefit: Free bags, uniforms, shoes for govt school students
+  Impact Score: 7.5/10 | Reach: 85%
+  Target Group: Government school students (Class 1-8)
+  Description: Provides educational essentials to government school students to reduce dropout rates.
+  ✓ Achievements:
+      • 1.6 Cr students receive materials annually
+      • Reduced financial barrier to education
+      • Helped reduce dropout rates
+  ✗ Challenges:
+      • Quality of materials varies
+      • Delayed distribution in some districts
+
+  ────────────────────────────────────────────────────────────
+  ✅ Widow Pension Scheme (Nirashrit Mahila) (WPS)
+  ────────────────────────────────────────────────────────────
+  Sector: Social Security | Launched: 2016 | Verdict: Moderate Success
+  Beneficiaries: 29.0 Lakh | Budget: ₹3,500 Cr
+  Per-Person Benefit: ₹1,000/month
+  Impact Score: 7.0/10 | Reach: 65%
+  Target Group: Destitute widows
+  Description: Monthly financial support to destitute widows through DBT.
+  ✓ Achievements:
+      • 29.03 lakh beneficiaries by Q3 2024-25
+      • Steady increase from 26.12L (Q1) to 29.03L (Q3)
+      • Direct benefit transfer to bank accounts
+  ✗ Challenges:
+      • Many eligible women unaware
+      • ₹1,000 insufficient in urban areas
+
+  ────────────────────────────────────────────────────────────
+  ✅ Divyang Pension Scheme (DPS)
+  ────────────────────────────────────────────────────────────
+  Sector: Social Security | Launched: 2016 | Verdict: Moderate Success
+  Beneficiaries: 12.0 Lakh | Budget: ₹1,440 Cr
+  Per-Person Benefit: ₹1,000/month
+  Impact Score: 6.5/10 | Reach: 50%
+  Target Group: Persons with disabilities (40%+)
+  Description: Monthly support to persons with disabilities through Aadhaar-linked DBT.
+  ✓ Achievements:
+      • ~12 lakh disabled persons covered
+      • Multiple pension amount revisions upward
+      • Integrated with SSPY portal
+  ✗ Challenges:
+      • Disability certificate process cumbersome
+      • Low awareness among target group
+
+  ────────────────────────────────────────────────────────────
+  ✅ Mukhyamantri Jan Arogya Yojana (MJAY)
+  ────────────────────────────────────────────────────────────
+  Sector: Health | Launched: 2019 | Verdict: Moderate Success
+  Beneficiaries: 10.0 Lakh | Budget: ₹1,200 Cr
+  Per-Person Benefit: Supplementary health coverage
+  Impact Score: 6.0/10 | Reach: 35%
+  Target Group: Families not covered under PMJAY
+  Description: State-specific health scheme to bridge gaps and provide additional coverage to vulnerable families.
+  ✓ Achievements:
+      • ~10 lakh families covered additionally
+      • Supplements central Ayushman scheme
+      • Focus on families just above PMJAY cutoff
+  ✗ Challenges:
+      • Overlap confusion with PMJAY
+      • Limited awareness
+      • Budget constraints
+
+  ────────────────────────────────────────────────────────────
+  ✅ Mukhyamantri Krishak Durghatna Kalyan Yojana (MKDKY)
+  ────────────────────────────────────────────────────────────
+  Sector: Agriculture | Launched: 2019 | Verdict: Moderate Success
+  Beneficiaries: 2.0 Lakh | Budget: ₹600 Cr
+  Per-Person Benefit: ₹5-9 lakh (accident/death compensation)
+  Impact Score: 6.0/10 | Reach: 40%
+  Target Group: Farmers injured/killed during agricultural activities
+  Description: Financial aid to farmer families for accidental death or disability during farming.
+  ✓ Achievements:
+      • ~2 lakh families compensated
+      • Compensation up to ₹9 lakh for death
+      • Covers permanent & partial disability
+  ✗ Challenges:
+      • Claim process is slow
+      • Documentation requirements are heavy
+
+  ────────────────────────────────────────────────────────────
+  ⚠️ UP Kisan Rin Mochan Yojana (Loan Waiver) (KRM)
+  ────────────────────────────────────────────────────────────
+  Sector: Agriculture | Launched: 2017 | Verdict: Mixed
+  Beneficiaries: 86.0 Lakh | Budget: ₹36,000 Cr
+  Per-Person Benefit: Up to ₹1,00,000 loan waiver
+  Impact Score: 5.5/10 | Reach: 45%
+  Target Group: Small & marginal farmers with crop loans
+  Description: Waiver of agricultural loans up to ₹1 lakh for small and marginal farmers.
+  ✓ Achievements:
+      • 86 lakh farmers targeted
+      • ₹36,000 Cr allocated for waivers
+      • Relief to heavily indebted farmers
+  ✗ Challenges:
+      • Many farmers reported not receiving waiver
+      • Only institutional loans covered, not informal debt
+      • Did not address root causes of farm distress
+      • Beneficiary selection criteria questioned
+
+  ────────────────────────────────────────────────────────────
+  ⚠️ Rashtriya Parivarik Laabh Yojana (RPLY)
+  ────────────────────────────────────────────────────────────
+  Sector: Social Security | Launched: 2016 | Verdict: Mixed
+  Beneficiaries: 5.0 Lakh | Budget: ₹1,500 Cr
+  Per-Person Benefit: ₹30,000 per family (on breadwinner death)
+  Impact Score: 5.0/10 | Reach: 35%
+  Target Group: BPL families who lost primary breadwinner
+  Description: One-time financial aid to BPL families upon death of primary earner.
+  ✓ Achievements:
+      • ~5 lakh families assisted
+      • Amount at ₹30,000 per family
+      • Online application process
+  ✗ Challenges:
+      • Amount too low for family sustenance
+      • Verification delays up to 6 months
+      • Many eligible families unaware
+
+  ────────────────────────────────────────────────────────────
+  ⚠️ CM Apprenticeship Promotion Scheme (CMAPS) (CMAPS)
+  ────────────────────────────────────────────────────────────
+  Sector: Employment & Industry | Launched: 2019 | Verdict: Mixed
+  Beneficiaries: 3.0 Lakh | Budget: ₹300 Cr
+  Per-Person Benefit: Apprenticeship + stipend supplement
+  Impact Score: 5.0/10 | Reach: 20%
+  Target Group: Youth seeking industry training
+  Description: Encourages industries to train youth through apprenticeship with government-supplemented stipend.
+  ✓ Achievements:
+      • ~3 lakh youth enrolled in apprenticeships
+      • Industry-academia collaboration improved
+  ✗ Challenges:
+      • Low conversion to permanent jobs
+      • Stipend amounts inadequate
+      • Limited industry participation
+
+  ────────────────────────────────────────────────────────────
+  🕐 Mahila Samarthya Yojana (MSY)
+  ────────────────────────────────────────────────────────────
+  Sector: Women & Girl Child | Launched: 2021 | Verdict: Too Early to Judge
+  Beneficiaries: 2.0 Lakh | Budget: ₹200 Cr
+  Per-Person Benefit: Skill training & entrepreneurship support
+  Impact Score: 5.0/10 | Reach: 20%
+  Target Group: Women seeking skill development & self-employment
+  Description: Focuses on skill development and entrepreneurship promotion for women.
+  ✓ Achievements:
+      • ~2 lakh women trained
+      • SHG linkages established
+  ✗ Challenges:
+      • Scheme is relatively new
+      • Scale of implementation still small
+      • Impact data not yet comprehensive
+
+  ────────────────────────────────────────────────────────────
+  ⚠️ Kisan Asaan Kist Yojana (KAK)
+  ────────────────────────────────────────────────────────────
+  Sector: Agriculture | Launched: 2018 | Verdict: Mixed
+  Beneficiaries: 8.0 Lakh | Budget: ₹400 Cr
+  Per-Person Benefit: Easy installment for electricity bills
+  Impact Score: 4.5/10 | Reach: 30%
+  Target Group: Farmers with pending electricity dues
+  Description: Allows farmers to pay pending electricity bills in easy installments.
+  ✓ Achievements:
+      • ~8 lakh farmers enrolled
+      • Reduced burden of lump-sum electricity payments
+  ✗ Challenges:
+      • Does not reduce electricity cost
+      • Many farmers still default
+      • Band-aid solution
+
+  ────────────────────────────────────────────────────────────
+  ⚠️ Sevayojan Portal (Employment Exchange) (SEV)
+  ────────────────────────────────────────────────────────────
+  Sector: Employment & Industry | Launched: 2018 | Verdict: Mixed
+  Beneficiaries: 15.0 Lakh | Budget: ₹150 Cr
+  Per-Person Benefit: Job matching, employment fair access
+  Impact Score: 4.5/10 | Reach: 25%
+  Target Group: Unemployed youth seeking jobs
+  Description: Digital platform connecting job seekers with employment opportunities and govt employment fairs.
+  ✓ Achievements:
+      • Lakhs of youth registered on portal
+      • Regular employment fairs (Rojgar Mela) conducted
+      • Digital bridge between employers and job seekers
+  ✗ Challenges:
+      • Actual job placements much lower than registrations
+      • Most jobs are low-paying contractual
+      • Private sector participation limited
+      • Quality of matches questionable
+
+  ────────────────────────────────────────────────────────────
+  ❌ Kaushal Satrang / YUVA Hub (KS)
+  ────────────────────────────────────────────────────────────
+  Sector: Employment & Industry | Launched: 2018 | Verdict: Underperformed
+  Beneficiaries: 5.0 Lakh | Budget: ₹500 Cr
+  Per-Person Benefit: Skill training across 7 programs
+  Impact Score: 4.0/10 | Reach: 18%
+  Target Group: Unemployed youth
+  Description: Umbrella skill development scheme with 7 sub-programs for youth employability.
+  ✓ Achievements:
+      • ~5 lakh youth trained
+      • Multiple skill centres established
+  ✗ Challenges:
+      • Training quality inconsistent
+      • Employment outcomes not tracked well
+      • Market-relevant skills gap persists
+      • Many centres underutilized
+
+  ────────────────────────────────────────────────────────────
+  ❌ Kisan Uday Yojana (Solar Pumps) (KUY)
+  ────────────────────────────────────────────────────────────
+  Sector: Agriculture | Launched: 2018 | Verdict: Underperformed
+  Beneficiaries: 1.5 Lakh | Budget: ₹800 Cr
+  Per-Person Benefit: Free energy-efficient pump replacement
+  Impact Score: 3.5/10 | Reach: 15%
+  Target Group: Farmers with old diesel/electric irrigation pumps
+  Description: Replacement of inefficient irrigation pumps with energy-efficient solar pumps.
+  ✓ Achievements:
+      • Limited rollout compared to target
+      • Some farmers received solar pump sets
+      • Aimed to reduce electricity subsidy burden
+  ✗ Challenges:
+      • Very slow implementation
+      • Target was 10 lakh pumps, achieved ~1.5 lakh
+      • Supply chain and installation delays
+      • Maintenance support lacking
+
+══════════════════════════════════════════════════════════════════════
+  LOCAL PEOPLE IMPACT ANALYSIS
+══════════════════════════════════════════════════════════════════════
+
+  🏠 Housing
+      53+ lakh pucca houses built for rural & urban poor. Families got
+      permanent shelter with toilet, electricity & gas connections.
+      Biggest life-changing scheme for homeless families.
+
+  💊 Healthcare
+      45 lakh+ poor patients received FREE hospital treatment worth
+      ₹7,040 Cr. 5 Cr+ Ayushman cards issued. Families no longer go
+      bankrupt due to medical emergencies.
+
+  👵 Social Security
+      97+ lakh elderly, widows & disabled receive ₹1,000/month pension.
+      Provides basic survival support to most vulnerable sections.
+
+  👧 Girl Child
+      26.81 lakh girls got financial support from birth to graduation.
+      Reduced female foeticide incentive, increased girl education
+      rates.
+
+  🎓 Education
+      1.6 Cr+ students get free bags & uniforms yearly. 80 lakh+
+      SC/OBC/Minority students get scholarships. Atal schools gave
+      construction workers' children world-class education.
+
+  🌾 Agriculture
+      86 lakh farmers targeted for loan waiver but actual impact was
+      mixed. Solar pump scheme largely failed. Crop insurance helped
+      but didn't solve root problems.
+
+  💼 Employment
+      ODOP was a game-changer — ₹93,000 Cr exports, 1.25L toolkits
+      given. But employment portals & skill programs underdelivered on
+      job creation.
+
+  👩 Women Empowerment
+      50,000 BC Sakhis earning through banking. Mission Shakti improved
+      safety infrastructure. Mass marriage scheme reduced dowry burden
+      on 3.5L families.
+
+══════════════════════════════════════════════════════════════════════
+  KEY FINDINGS & CONCLUSIONS
+══════════════════════════════════════════════════════════════════════
+
+  🏆 BEST PERFORMERS: PMAY Rural Housing (98.7% completion), Atal Schools (93% pass rate), ODOP (₹93K Cr exports), Ayushman Bharat (45L treated)
+
+  ❌ UNDERPERFORMERS: Kisan Uday Solar Pumps (15% of target), Kaushal Satrang (poor job outcomes), Sevayojan (low placement rates)
+
+  ⚠️ MIXED RESULTS: Kisan Rin Mochan loan waiver was politically popular but many farmers reported non-receipt. Only institutional loans covered.
+
+  📈 BIGGEST REACH: Free Bags & Uniform (1.6 Cr students), Scholarships (80L students), Old Age Pension (56L elderly)
+
+  💰 BIGGEST BUDGET: PMAY Rural (₹45,000 Cr), Loan Waiver (₹36,000 Cr), PMAY Urban (₹25,000 Cr)
+
+  🎯 HIGHEST IMPACT SCORE: Atal Schools (9.5/10), PMAY Rural (9.5/10), ODOP (9.0/10), Ayushman Bharat (9.0/10)
+
+  📊 OVERALL: 60% of schemes performed well (Success+), 28% had mixed results, 12% underperformed or too early to judge
+
+══════════════════════════════════════════════════════════════════════
+  END OF REPORT
+══════════════════════════════════════════════════════════════════════
+

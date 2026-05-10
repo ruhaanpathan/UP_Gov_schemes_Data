@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UP Government Schemes Analysis (2016-2026)</title>
+<meta name="description" content="Comprehensive analysis of 24 Uttar Pradesh government schemes covering beneficiaries, budget, sector impact and verdicts.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav id="navbar">
+  <div class="nav-brand">📊 UP Schemes Analysis</div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#sectors">Sectors</a>
+    <a href="#schemes">Schemes</a>
+    <a href="#verdict">Verdict</a>
+    <a href="#impact">Impact</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>Uttar Pradesh Government Schemes</h1>
+    <p class="hero-sub">Comprehensive Analysis • 2016–2026 • Data-Driven Insights</p>
+    <div class="hero-stats">
+      <div class="stat-card" id="stat-schemes"><div class="stat-num" data-target="24">0</div><div class="stat-label">Schemes Analyzed</div></div>
+      <div class="stat-card" id="stat-ben"><div class="stat-num" data-target="6.79">0</div><div class="stat-label">Crore Beneficiaries</div></div>
+      <div class="stat-card" id="stat-budget"><div class="stat-num" data-target="1.52">0</div><div class="stat-label">Lakh Crore ₹ Budget</div></div>
+      <div class="stat-card" id="stat-sectors"><div class="stat-num" data-target="7">0</div><div class="stat-label">Sectors Covered</div></div>
+      <div class="stat-card" id="stat-score"><div class="stat-num" data-target="6.8">0</div><div class="stat-label">Avg Impact /10</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTOR ANALYSIS ═══ -->
+<section id="sectors" class="section">
+  <h2 class="section-title">Sector-Wise Analysis</h2>
+  <div class="charts-grid">
+    <div class="chart-card"><h3>Beneficiary Distribution</h3><canvas id="chartSectorBen"></canvas></div>
+    <div class="chart-card"><h3>Budget Allocation (₹ Crore)</h3><canvas id="chartSectorBudget"></canvas></div>
+  </div>
+  <div class="charts-grid mt-2">
+    <div class="chart-card wide"><h3>Sector Performance Comparison</h3><canvas id="chartSectorCompare"></canvas></div>
+  </div>
+  <!-- Sector summary cards -->
+  <div class="sector-cards" id="sectorCards"></div>
+</section>
+
+<!-- ═══ ALL SCHEMES ═══ -->
+<section id="schemes" class="section">
+  <h2 class="section-title">All 24 Schemes</h2>
+  <div class="filter-bar">
+    <select id="filterSector"><option value="all">All Sectors</option></select>
+    <select id="filterVerdict"><option value="all">All Verdicts</option></select>
+    <input type="text" id="searchBox" placeholder="🔍 Search schemes...">
+    <select id="sortBy">
+      <option value="impact_score">Sort: Impact Score</option>
+      <option value="beneficiaries_lakh">Sort: Beneficiaries</option>
+      <option value="budget_crore">Sort: Budget</option>
+      <option value="launch_year">Sort: Launch Year</option>
+    </select>
+  </div>
+  <div class="scheme-grid" id="schemeGrid"></div>
+</section>
+
+<!-- ═══ VERDICT ═══ -->
+<section id="verdict" class="section">
+  <h2 class="section-title">What Worked vs What Flopped</h2>
+  <div class="charts-grid">
+    <div class="chart-card"><h3>Verdict Distribution</h3><canvas id="chartVerdict"></canvas></div>
+    <div class="chart-card"><h3>Budget vs Impact</h3><canvas id="chartScatter"></canvas></div>
+  </div>
+  <div class="verdict-summary" id="verdictSummary"></div>
+</section>
+
+<!-- ═══ LOCAL IMPACT ═══ -->
+<section id="impact" class="section">
+  <h2 class="section-title">Impact on Local People</h2>
+  <div class="impact-grid" id="impactGrid"></div>
+</section>
+
+<!-- ═══ KEY FINDINGS ═══ -->
+<section id="findings" class="section">
+  <h2 class="section-title">Key Findings & Conclusions</h2>
+  <div class="findings-grid" id="findingsGrid"></div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div id="dataStatus"></div>
+  <p>Data sourced from official government portals: sspy-up.gov.in, mksy.up.gov.in, rhreporting.nic.in, pmaymis.gov.in, odopup.in, ayushmanup.in, up.gov.in</p>
+  <p>Analysis generated on May 10, 2026 • Research-backed data pipeline</p>
+</footer>
+
+<script src="dashboard_data.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

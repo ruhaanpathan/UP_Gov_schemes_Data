@@ -1,0 +1,206 @@
+{
+  "source": "sspy-up.gov.in",
+  "scraped_at": "2026-05-10 16:36:11.125569",
+  "schemes": [
+    {
+      "name": "Old Age Pension",
+      "url": "https://sspy-up.gov.in/oap",
+      "status": "SCRAPED",
+      "page_size": 15029,
+      "stats": [],
+      "tables": [
+        [
+          [
+            "",
+            "राष्ट्रीय वृद्धावस्था पेंशन(समाज कल्याण विभाग), उत्तर प्रदेश सरकार",
+            ""
+          ]
+        ],
+        [
+          [
+            "प्रकार:-",
+            "ज़िला समाज कल्याण अधिकारी"
+          ],
+          [
+            "जनपद:-",
+            "जनपद चुनेंAGRAALIGARHAyodhyaAMBEDKAR NAGARAMETHIAMROHAAURAIYAAZAMGARHBAGHPATBAHRAICHBALLIABALRAMPURBANDABARABANKIBAREILLYBASTIBIJNORBUDAUNBHADOHIBULANDSHAHRCHANDAULICHITRAKOOTDEORIAETAHETAWAHFARRUKHABADFATEHPURFIROZABADGAUTAM BUDDHA NAGARGHAZIABADGHAZIPURGONDAGORAKHPURHAMIRPURHAPURHARDOIJALAUNHATHRASJAUNPURJHANSIKANNAUJKANPUR DEHATKANPUR NAGARKASGANJKAUSHAMBIKHERIKUSHI NAGARLALITPURLUCKNOWMAHARAJGANJMAHOBAMAINPURIMATHURAMAUMEERUTMIRZAPURMORADABADMUZAFFARNAGARPILIBHITPRATAPGARHPrayagrajRAE BARELIRAMPURSAHARANPURSAMBHALSANT KABEER NAGARSHAHJAHANPURSHAMLISHRAVASTISIDDHARTH NAGARSITAPURSONBHADRASULTANPURUNNAOVARANASI"
+          ],
+          [
+            "पासवर्ड:-",
+            ""
+          ],
+          [
+            "Verify:-",
+            "",
+            ""
+          ],
+          [
+            "",
+            "ऊपर लिखा हुआ कोड नीचे बॉक्स में टाइप करें -"
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "Widow Pension",
+      "url": "https://sspy-up.gov.in/widow/Index",
+      "status": "FAILED"
+    },
+    {
+      "name": "Divyang Pension",
+      "url": "https://sspy-up.gov.in/handicap/Index",
+      "status": "FAILED"
+    }
+  ],
+  "main_page": {
+    "status": "SCRAPED",
+    "url": "https://sspy-up.gov.in",
+    "page_size": 50633,
+    "title": "UP Pension Scheme",
+    "stats": [],
+    "tables": [
+      [
+        [
+          "",
+          "क़्वार्टर (1)",
+          "क़्वार्टर (2)",
+          "क़्वार्टर (3)",
+          "क़्वार्टर (4)",
+          "कुल योग"
+        ],
+        [
+          "क्रo संo",
+          "पेंशन का विवरण",
+          "विभाग का नाम",
+          "लभार्थियो की संख्या",
+          "कुल हस्तान्तरित धनराशि (करोड़ में)",
+          "लभार्थियो की संख्या",
+          "कुल हस्तान्तरित धनराशि (करोड़ में)",
+          "लभार्थियो की संख्या",
+          "कुल हस्तान्तरित धनराशि (करोड़ में)",
+          "लभार्थियो की संख्या",
+          "कुल हस्तान्तरित धनराशि (करोड़ में)",
+          "कुल हस्तान्तरित धनराशि (करोड़ में)"
+        ],
+        [
+          "1",
+          "वृद्धावस्था पेंशन",
+          "समाज कल्याण विभाग",
+          "67,50,000",
+          "2024.37",
+          "67,50,000",
+          "2036.92",
+          "0",
+          "0.00",
+          "0",
+          "0.00",
+          "4061.29"
+        ],
+        [
+          "2",
+          "निराश्रित महिला पेंशन",
+          "महिला कल्याण विभाग",
+          "26,12,786",
+          "783.83",
+          "0",
+          "0.00",
+          "0",
+          "0.00",
+          "0",
+          "0.00",
+          "783.83"
+        ],
+        [
+          "3",
+          "दिव्यांग पेंशन",
+          "दिव्यांगजन सशक्तिकरण विभाग",
+          "11,04,703",
+          "331.40",
+          "0",
+          "0.00",
+          "0",
+          "0.00",
+          "0",
+          "0.00",
+          "331.40"
+        ],
+        [
+          "4",
+          "कुष्ठावस्था पेंशन",
+          "दिव्यांगजन सशक्तिकरण विभाग",
+          "12,400",
+          "111.60",
+          "0",
+          "0.00",
+          "0",
+          "0.00",
+          "0",
+          "0.00",
+          "111.60"
+        ],
+        [
+          "Total",
+          "1,04,79,889",
+          "3,251.00",
+          "67,50,000",
+          "2,036.00",
+          "0",
+          "0.00",
+          "0",
+          "0.00",
+          "5,288.00"
+        ]
+      ]
+    ]
+  },
+  "found_links": [
+    {
+      "text": "राष्ट्रीय वृद्धावस्था पेंशन",
+      "href": "oldage_h.aspx"
+    },
+    {
+      "text": "निराश्रित महिला पेंशन",
+      "href": "widow_h.aspx"
+    },
+    {
+      "text": "दिव्यांग एवं कुष्ठावस्था पेंशन",
+      "href": "handicap_h.aspx"
+    },
+    {
+      "text": "",
+      "href": "https://sspy-up.gov.in/oap/public_new/UserRegistrationForm.aspx?Scheme=OldAgePension"
+    },
+    {
+      "text": "",
+      "href": "https://sspy-up.gov.in/oap/public_new/UserRegistrationForm.aspx?Scheme=WidowPension"
+    },
+    {
+      "text": "",
+      "href": "https://sspy-up.gov.in/oap/public_new/UserRegistrationForm.aspx?Scheme=HandicapPension"
+    },
+    {
+      "text": "अधिक पढ़ें..",
+      "href": "widow_h.aspx"
+    },
+    {
+      "text": "अधिक पढ़ें..",
+      "href": "handicap_h.aspx"
+    },
+    {
+      "text": "राष्ट्रीय वृद्धावस्था पेंशन",
+      "href": ""
+    },
+    {
+      "text": "योजना के विषय में",
+      "href": "widow_h.aspx"
+    },
+    {
+      "text": "दिव्यांग पेंशन",
+      "href": ""
+    },
+    {
+      "text": "योजना के विषय में",
+      "href": "handicap_h.aspx"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+======================================================================
+  UP GOVERNMENT SCHEMES — PIPELINE EXECUTION SUMMARY
+  Generated: 2026-05-10 16:40:58
+======================================================================
+
+  📊 Total Schemes Analyzed: 24
+  🌐 Live Data Matched:      6 schemes
+  📚 Curated Data Only:       18 schemes
+
+  Live Data Sources Used:
+    • ayushmanup.in → 1 schemes
+    • pmayg.nic.in → 1 schemes
+    • mksy.up.gov.in → 1 schemes
+    • pmay-urban.gov.in → 1 schemes
+    • odopup.in → 1 schemes
+    • sspy-up.gov.in → 1 schemes
+
+  📁 Output Files:
+    • 01_sector_beneficiaries.png (104,731 bytes)
+    • 02_budget_comparison.png (147,098 bytes)
+    • 03_verdict_analysis.png (131,961 bytes)
+    • 04_impact_heatmap.png (277,946 bytes)
+    • 05_top_beneficiaries.png (104,481 bytes)
+    • 06_sector_comparison.png (98,324 bytes)
+    • 07_success_failure.png (53,521 bytes)
+    • 08_impact_vs_budget.png (101,343 bytes)
+    • Full_Analysis_Report.txt (37,083 bytes)
+    • Sector_Summary.csv (363 bytes)
+    • UP_Schemes_Analysis.csv (6,066 bytes)
+    • merged_data.json (22,481 bytes)
