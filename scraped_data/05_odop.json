@@ -1,11 +1,11 @@
 {
   "source": "odopup.in",
-  "scraped_at": "2026-05-10 16:39:19.766643",
+  "scraped_at": "2026-05-13 21:14:55.358197",
+  "parsed_data": {
+    "products": [],
+    "districts_found": 0
+  },
   "status": "SCRAPED",
   "url": "http://odopup.in",
-  "page_size": 647,
-  "title": "\n",
-  "stats": [],
-  "tables": [],
-  "products": []
+  "page_size": 647
 }

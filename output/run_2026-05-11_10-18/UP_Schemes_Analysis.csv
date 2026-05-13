@@ -1,0 +1,26 @@
+﻿name,short,sector,launch_year,beneficiaries_lakh,budget_crore,disbursed_crore,impact_score,reach_percent,verdict,data_source,scrape_status
+Mukhyamantri Kanya Sumangala Yojana,MKSY,Women & Girl Child,2019,26.81,1200,0.0,5.5,72,Moderate Success,mksy.up.gov.in (page only),PARTIAL
+Mukhyamantri Samuhik Vivah Yojana,MSVY,Women & Girl Child,2017,3.5,600,0.0,4.7,55,Mixed,research,RESEARCH_ONLY
+Mission Shakti,MS,Women & Girl Child,2020,50.0,3146,0.0,5.1,60,Moderate Success,research,RESEARCH_ONLY
+Old Age Pension Scheme (SSPY),OAP,Social Security,2016,67.5,6700,4061.29,6.1,78,Success,sspy-up.gov.in,LIVE
+Widow Pension Scheme (Nirashrit Mahila),WPS,Social Security,2016,26.13,3500,783.83,4.6,65,Mixed,sspy-up.gov.in,LIVE
+Divyang Pension Scheme,DPS,Social Security,2016,11.05,1440,331.4,4.4,50,Mixed,sspy-up.gov.in,LIVE
+Rashtriya Parivarik Laabh Yojana,RPLY,Social Security,2016,5.0,1500,0.0,4.5,35,Mixed,research,RESEARCH_ONLY
+UP Kisan Rin Mochan Yojana (Loan Waiver),KRM,Agriculture,2017,86.0,36000,0.0,5.1,45,Moderate Success,research,RESEARCH_ONLY
+Mukhyamantri Krishak Durghatna Kalyan Yojana,MKDKY,Agriculture,2019,2.0,600,0.0,3.9,40,Underperformed,research,RESEARCH_ONLY
+Kisan Uday Yojana (Solar Pumps),KUY,Agriculture,2018,1.5,800,0.0,3.4,15,Underperformed,research,RESEARCH_ONLY
+Kisan Asaan Kist Yojana,KAK,Agriculture,2018,8.0,400,0.0,4.5,30,Mixed,research,RESEARCH_ONLY
+One District One Product (ODOP),ODOP,Employment & Industry,2018,25.0,6000,0.0,5.5,80,Moderate Success,odopup.in (page only),PARTIAL
+Sevayojan Portal (Employment Exchange),SEV,Employment & Industry,2018,15.0,150,0.0,4.8,25,Mixed,research,RESEARCH_ONLY
+CM Apprenticeship Promotion Scheme (CMAPS),CMAPS,Employment & Industry,2019,3.0,300,0.0,3.8,20,Underperformed,research,RESEARCH_ONLY
+Kaushal Satrang / YUVA Hub,KS,Employment & Industry,2018,5.0,500,0.0,4.0,18,Mixed,research,RESEARCH_ONLY
+Atal Residential Schools (Atal Awasiya Vidyalaya),ARS,Education,2021,0.1,500,0.0,3.6,85,Underperformed,research,RESEARCH_ONLY
+Pre-Matric & Post-Matric Scholarship,SCHOL,Education,2016,80.0,8000,0.0,6.0,70,Success,research,RESEARCH_ONLY
+Free School Bag & Uniform Scheme,FSBU,Education,2017,160.0,2000,0.0,6.6,85,Success,research,RESEARCH_ONLY
+Ayushman Bharat PMJAY (UP Implementation),AB,Health,2018,956.82,7040,0.0,6.9,82,Success,ayushmanup.in,LIVE
+Mukhyamantri Jan Arogya Yojana,MJAY,Health,2019,10.0,1200,0.0,4.3,35,Mixed,research,RESEARCH_ONLY
+"PMAY-Gramin (Rural Housing, UP)",PMAYG,Housing,2016,36.38,45000,0.0,5.9,95,Moderate Success,rhreporting.nic.in (page only),PARTIAL
+"PMAY-Urban (Urban Housing, UP)",PMAYU,Housing,2016,17.0,25000,0.0,5.3,75,Moderate Success,pmaymis.gov.in (page only),PARTIAL
+BC Sakhi (Banking Correspondent),BCS,Women & Girl Child,2020,0.5,200,0.0,3.9,65,Underperformed,research,RESEARCH_ONLY
+Mahila Samarthya Yojana,MSY,Women & Girl Child,2021,2.0,200,0.0,3.4,20,Underperformed,research,RESEARCH_ONLY
+Wheat Procurement (FCS),WP,Food & Civil Supplies,2016,2.1,0,0.0,4.6,0,Mixed,fcs.up.gov.in,LIVE

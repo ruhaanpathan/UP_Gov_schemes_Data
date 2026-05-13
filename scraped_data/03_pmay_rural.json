@@ -1,10 +1,8 @@
 {
   "source": "rhreporting.nic.in",
-  "scraped_at": "2026-05-10 16:38:42.779703",
+  "scraped_at": "2026-05-13 21:14:17.666011",
+  "parsed_data": {},
   "status": "SCRAPED",
   "url": "https://rhreporting.nic.in/netiay/newreport.aspx",
-  "page_size": 75820,
-  "title": "\r\n\tPradhan Mantri Awaas Yojana-Gramin\r\n",
-  "stats": [],
-  "tables": []
+  "page_size": 76010
 }

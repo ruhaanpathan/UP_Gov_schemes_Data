@@ -1,19 +1,23 @@
 """
 ═══════════════════════════════════════════════════════════════
-  UP GOVERNMENT SCHEMES — MASTER PIPELINE
+  UP GOVERNMENT SCHEMES — DATA-DRIVEN PIPELINE v3.1
+  
+  HYBRID APPROACH:
+    - Uses scheme_data.py as RESEARCH BASELINE (24 schemes)
+    - OVERRIDES with live scraped data where available
+    - COMPUTES all impact scores via formula (nothing hardcoded)
   
   Stages:
-    1. SCRAPE  → Fetch live data from 7 government portals
-    2. MERGE   → Combine scraped data with curated research data
-    3. ANALYZE → Generate charts, reports, CSVs
-═══════════════════════════════════════════════════════════════
-  Run: python pipeline.py
-  Dependencies: pip install -r requirements.txt
+    1. SCRAPE  → Fetch live data from government portals
+    2. MERGE   → Combine research baseline + live scraped overrides
+    3. SCORE   → Compute impact scores from merged metrics
+    4. ANALYZE → Generate charts, reports, CSVs
+    5. DASHBOARD → Generate web dashboard data
 ═══════════════════════════════════════════════════════════════
 """
-import sys, os, json
+import sys, os, json, re
+from datetime import datetime
 
-# ── Auto-install dependencies ──
 def ensure_deps():
     missing = []
     for pkg, imp in [("requests","requests"),("beautifulsoup4","bs4"),
@@ -25,16 +29,24 @@ def ensure_deps():
         print(f"📦 Installing: {', '.join(missing)}")
         import subprocess
         subprocess.check_call([sys.executable, "-m", "pip", "install"] + missing + ["-q"])
-        print("✅ Dependencies installed!\n")
 
 ensure_deps()
 
 import pandas as pd
-from datetime import datetime
+
+SECTOR_COLORS = {
+    "Women & Girl Child":"#E91E63","Social Security":"#FF9800","Agriculture":"#4CAF50",
+    "Employment & Industry":"#2196F3","Education":"#9C27B0","Health":"#00BCD4",
+    "Housing":"#FF5722","Food & Civil Supplies":"#8BC34A",
+}
+VERDICT_COLORS = {
+    "Major Success":"#00E676","Success":"#69F0AE","Moderate Success":"#FFD740",
+    "Mixed":"#FFAB40","Underperformed":"#FF5252","Too Early to Judge":"#B0BEC5",
+}
+CURRENT_YEAR = datetime.now().year
 
 
 def stage1_scrape():
-    """Stage 1: Scrape live data from government portals."""
     print("\n" + "█" * 60)
     print("  STAGE 1: SCRAPING GOVERNMENT PORTALS")
     print("█" * 60)
@@ -43,255 +55,281 @@ def stage1_scrape():
 
 
 def stage2_merge(scraped):
-    """Stage 2: Merge scraped data with curated research data."""
+    """Merge research baseline with live scraped overrides."""
     print("\n" + "█" * 60)
-    print("  STAGE 2: MERGING DATA SOURCES")
+    print("  STAGE 2: MERGING RESEARCH DATA + LIVE SCRAPED OVERRIDES")
     print("█" * 60)
-    from scheme_data import SCHEMES
+    from scheme_data import SCHEMES as BASELINE
+
+    # Parse SSPY pension data
+    sspy_pensions = {}
+    sspy = scraped.get("sspy_pensions", {})
+    if isinstance(sspy, dict) and sspy.get("status") == "SCRAPED":
+        for pension in sspy.get("parsed_data", {}).get("pensions", []):
+            name = pension.get("name", "")
+            sspy_pensions[name.lower()] = pension
+
+    # Parse Ayushman data
+    ayushman_data = {}
+    ab = scraped.get("ayushman", {})
+    if isinstance(ab, dict) and ab.get("status") == "SCRAPED":
+        ayushman_data = ab.get("parsed_data", {})
+
+    # Parse FCS data
+    fcs_data = {}
+    up_gov = scraped.get("up_gov", {})
+    if isinstance(up_gov, dict):
+        fcs_data = up_gov.get("parsed_data", {}).get("wheat_procurement", {})
 
     merged = []
-    for scheme in SCHEMES:
-        entry = scheme.copy()
-        entry["data_source"] = "curated_research"
-        entry["live_data_available"] = False
+    live_count = 0
 
-        # Try to match with scraped data
+    for scheme in BASELINE:
+        entry = {
+            "name": scheme["name"],
+            "short": scheme["short"],
+            "sector": scheme["sector"],
+            "launch_year": scheme["launch_year"],
+            "target_group": scheme.get("target_group", ""),
+            "description": scheme.get("description", ""),
+            "per_person_benefit": scheme.get("per_person_benefit", ""),
+            "achievements": scheme.get("achievements", []),
+            "challenges": scheme.get("challenges", []),
+            # Research baseline values
+            "beneficiaries_lakh": scheme["beneficiaries_lakh"],
+            "budget_crore": scheme["budget_crore"],
+            "disbursed_crore": 0,
+            "reach_percent": scheme.get("reach_percent", 0),
+            "data_source": "research",
+            "scrape_status": "RESEARCH_ONLY",
+        }
+        
         name_lower = scheme["name"].lower()
 
-        # Match pension schemes with SSPY data
-        if scraped.get("sspy_pensions") and isinstance(scraped["sspy_pensions"], dict):
-            sspy = scraped["sspy_pensions"]
-            for s in sspy.get("schemes", []):
-                if s.get("status") == "SCRAPED":
-                    if ("old age" in name_lower and "Old Age" in s.get("name","")):
-                        entry["live_data_available"] = True
-                        entry["live_source"] = "sspy-up.gov.in"
-                        entry["live_raw"] = s
-                    elif ("widow" in name_lower and "Widow" in s.get("name","")):
-                        entry["live_data_available"] = True
-                        entry["live_source"] = "sspy-up.gov.in"
-                        entry["live_raw"] = s
-                    elif ("divyang" in name_lower and "Handicap" in s.get("name","")):
-                        entry["live_data_available"] = True
-                        entry["live_source"] = "sspy-up.gov.in"
-                        entry["live_raw"] = s
+        # ── OVERRIDE with SSPY live data ──
+        if "old age" in name_lower or "vridha" in name_lower:
+            p = sspy_pensions.get("old age pension")
+            if p:
+                entry["beneficiaries_lakh"] = p["beneficiaries_lakh"]
+                entry["disbursed_crore"] = p["total_disbursed_crore"]
+                entry["budget_crore"] = max(scheme["budget_crore"], p["total_disbursed_crore"])
+                entry["data_source"] = "sspy-up.gov.in"
+                entry["scrape_status"] = "LIVE"
+                entry["quarters_active"] = p["quarters_with_data"]
+                live_count += 1
+        
+        elif "widow" in name_lower or "nirashrit" in name_lower:
+            p = sspy_pensions.get("widow pension")
+            if p:
+                entry["beneficiaries_lakh"] = p["beneficiaries_lakh"]
+                entry["disbursed_crore"] = p["total_disbursed_crore"]
+                entry["budget_crore"] = max(scheme["budget_crore"], p["total_disbursed_crore"])
+                entry["data_source"] = "sspy-up.gov.in"
+                entry["scrape_status"] = "LIVE"
+                entry["quarters_active"] = p["quarters_with_data"]
+                live_count += 1
+        
+        elif "divyang" in name_lower:
+            p = sspy_pensions.get("divyang pension")
+            if p:
+                entry["beneficiaries_lakh"] = p["beneficiaries_lakh"]
+                entry["disbursed_crore"] = p["total_disbursed_crore"]
+                entry["budget_crore"] = max(scheme["budget_crore"], p["total_disbursed_crore"])
+                entry["data_source"] = "sspy-up.gov.in"
+                entry["scrape_status"] = "LIVE"
+                entry["quarters_active"] = p["quarters_with_data"]
+                live_count += 1
 
-        # Match MKSY
-        if "kanya sumangala" in name_lower and scraped.get("mksy"):
-            if scraped["mksy"].get("status") in ("SCRAPED",):
-                entry["live_data_available"] = True
-                entry["live_source"] = "mksy.up.gov.in"
+        # ── OVERRIDE with Ayushman live data ──
+        elif "ayushman" in name_lower:
+            if ayushman_data.get("total_beneficiaries") or ayushman_data.get("golden_cards_issued"):
+                ben = ayushman_data.get("beneficiaries_lakh", 0)
+                if ben > 0:
+                    entry["beneficiaries_lakh"] = ben
+                entry["golden_cards_issued"] = ayushman_data.get("golden_cards_issued", 0)
+                entry["empanelled_hospitals"] = ayushman_data.get("empanelled_hospitals", 0)
+                entry["claims_submitted"] = ayushman_data.get("claims_submitted", 0)
+                entry["claims_settled_pct"] = ayushman_data.get("claims_settled_pct", 0)
+                entry["preauth_requests"] = ayushman_data.get("preauth_requests", 0)
+                entry["card_coverage_pct"] = ayushman_data.get("card_coverage_pct", 0)
+                if entry["claims_settled_pct"] > 0:
+                    entry["reach_percent"] = entry["claims_settled_pct"]
+                entry["data_source"] = "ayushmanup.in"
+                entry["scrape_status"] = "LIVE"
+                live_count += 1
 
-        # Match PMAY
-        if "pmay" in name_lower or "awas" in name_lower:
+        # Mark portal status for other schemes
+        elif "mksy" in name_lower or "kanya sumangala" in name_lower:
+            if scraped.get("mksy", {}).get("status") == "SCRAPED":
+                entry["data_source"] = "mksy.up.gov.in (page only)"
+                entry["scrape_status"] = "PARTIAL"
+        elif "pmay" in name_lower or "awas" in name_lower:
             if "rural" in name_lower or "gramin" in name_lower:
-                if scraped.get("pmay_rural", {}).get("status") not in ("FAILED",None):
-                    entry["live_data_available"] = True
-                    entry["live_source"] = "pmayg.nic.in"
+                if scraped.get("pmay_rural", {}).get("status") == "SCRAPED":
+                    entry["data_source"] = "rhreporting.nic.in (page only)"
+                    entry["scrape_status"] = "PARTIAL"
             elif "urban" in name_lower:
-                if scraped.get("pmay_urban", {}).get("status") not in ("FAILED",None):
-                    entry["live_data_available"] = True
-                    entry["live_source"] = "pmay-urban.gov.in"
-
-        # Match ODOP
-        if "odop" in name_lower or "one district" in name_lower:
-            if scraped.get("odop", {}).get("status") not in ("FAILED",None):
-                entry["live_data_available"] = True
-                entry["live_source"] = "odopup.in"
-
-        # Match Ayushman
-        if "ayushman" in name_lower:
-            if scraped.get("ayushman", {}).get("status") not in ("FAILED",None):
-                entry["live_data_available"] = True
-                entry["live_source"] = "ayushmanup.in"
-
-        # Match Scholarship
-        if "scholarship" in name_lower or "matric" in name_lower:
-            if scraped.get("scholarship", {}).get("status") not in ("FAILED",None):
-                entry["live_data_available"] = True
-                entry["live_source"] = "scholarship.up.gov.in"
+                if scraped.get("pmay_urban", {}).get("status") == "SCRAPED":
+                    entry["data_source"] = "pmaymis.gov.in (page only)"
+                    entry["scrape_status"] = "PARTIAL"
+        elif "odop" in name_lower or "one district" in name_lower:
+            if scraped.get("odop", {}).get("status") == "SCRAPED":
+                entry["data_source"] = "odopup.in (page only)"
+                entry["scrape_status"] = "PARTIAL"
 
         merged.append(entry)
 
-    # Save merged data (use same timestamped folder as analysis)
-    from analysis import OUT as out_dir
-    os.makedirs(out_dir, exist_ok=True)
+    # Add FCS wheat procurement as extra scheme if data available
+    if fcs_data and fcs_data.get("farmers", 0) > 0:
+        merged.append({
+            "name": "Wheat Procurement (FCS)",
+            "short": "WP",
+            "sector": "Food & Civil Supplies",
+            "launch_year": 2016,
+            "target_group": "Farmers selling wheat to government",
+            "description": f"Government wheat procurement: {fcs_data.get('farmers',0):,.0f} farmers, {fcs_data.get('quantity_lakh_mt',0)} lakh MT in {fcs_data.get('year','')}",
+            "per_person_benefit": "MSP price for wheat",
+            "achievements": [f"{fcs_data.get('farmers',0):,.0f} farmers enrolled", f"{fcs_data.get('quantity_lakh_mt',0)} lakh MT procured"],
+            "challenges": ["Limited to wheat crop only"],
+            "beneficiaries_lakh": round(fcs_data.get("farmers", 0) / 100000, 2),
+            "budget_crore": 0,
+            "disbursed_crore": 0,
+            "reach_percent": 0,
+            "data_source": "fcs.up.gov.in",
+            "scrape_status": "LIVE",
+        })
+        live_count += 1
 
-    # Clean merged for JSON (remove non-serializable)
-    clean = []
-    for m in merged:
-        c = {k: v for k, v in m.items() if k != "live_raw"}
-        clean.append(c)
-
-    with open(os.path.join(out_dir, "merged_data.json"), "w", encoding="utf-8") as f:
-        json.dump(clean, f, indent=2, ensure_ascii=False)
-
-    live_count = sum(1 for m in merged if m["live_data_available"])
-    print(f"\n  ✅ Merged {len(merged)} schemes")
-    print(f"  🌐 Live data matched for {live_count}/{len(merged)} schemes")
-    print(f"  📚 Curated research data used as baseline for all {len(merged)} schemes")
+    print(f"\n  📊 Total schemes: {len(merged)}")
+    print(f"  🌐 Live scraped data for: {live_count} schemes")
+    print(f"  📚 Research baseline for: {len(merged) - live_count} schemes")
+    print(f"  ⚡ Impact scores will be COMPUTED for all {len(merged)} schemes")
 
     return merged
 
 
-def stage3_analyze(merged):
-    """Stage 3: Run full analysis and generate outputs."""
+def stage3_score(schemes):
+    """Compute impact scores from data — NO hardcoded scores."""
     print("\n" + "█" * 60)
-    print("  STAGE 3: RUNNING FULL ANALYSIS")
+    print("  STAGE 3: COMPUTING IMPACT SCORES (DATA-DRIVEN)")
     print("█" * 60)
+    
+    from score_engine import compute_impact_score, compute_verdict
 
-    # Import and run the analysis module
-    from analysis import console_report, print_header
-    from analysis import (chart1_sector_beneficiaries, chart2_budget_comparison,
-                          chart3_verdict_pie, chart4_impact_heatmap,
-                          chart5_top_beneficiaries, chart6_sector_comparison,
-                          chart7_success_failure, chart8_scatter_impact_vs_budget,
-                          save_csv, save_report_txt)
+    for s in schemes:
+        metrics = {
+            "beneficiaries_lakh": s.get("beneficiaries_lakh", 0),
+            "budget_crore": s.get("budget_crore", 0),
+            "disbursed_crore": s.get("disbursed_crore", 0),
+            "reach_percent": s.get("reach_percent", 0),
+            "launch_year": s.get("launch_year"),
+        }
+        
+        # Use operational metrics for reach where available
+        if s.get("claims_settled_pct"):
+            metrics["reach_percent"] = s["claims_settled_pct"]
+        elif s.get("quarters_active"):
+            metrics["reach_percent"] = min(s["quarters_active"] * 25, 100)
 
-    # Console report
-    console_report()
-
-    # Generate all charts
-    print_header("GENERATING VISUALIZATIONS")
-    chart1_sector_beneficiaries()
-    chart2_budget_comparison()
-    chart3_verdict_pie()
-    chart4_impact_heatmap()
-    chart5_top_beneficiaries()
-    chart6_sector_comparison()
-    chart7_success_failure()
-    chart8_scatter_impact_vs_budget()
-
-    # Export data
-    print_header("EXPORTING DATA")
-    save_csv()
-    save_report_txt()
-
-    # Generate pipeline summary
-    generate_pipeline_summary(merged)
-
-
-def generate_pipeline_summary(merged):
-    """Generate final pipeline summary report."""
-    from analysis import OUT as out_dir
-    live = [m for m in merged if m["live_data_available"]]
-    curated = [m for m in merged if not m["live_data_available"]]
-
-    summary = []
-    summary.append("=" * 70)
-    summary.append("  UP GOVERNMENT SCHEMES — PIPELINE EXECUTION SUMMARY")
-    summary.append(f"  Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    summary.append("=" * 70)
-    summary.append(f"\n  📊 Total Schemes Analyzed: {len(merged)}")
-    summary.append(f"  🌐 Live Data Matched:      {len(live)} schemes")
-    summary.append(f"  📚 Curated Data Only:       {len(curated)} schemes")
-    summary.append(f"\n  Live Data Sources Used:")
-    sources = set(m.get("live_source","") for m in live if m.get("live_source"))
-    for s in sources:
-        count = sum(1 for m in live if m.get("live_source") == s)
-        summary.append(f"    • {s} → {count} schemes")
-    summary.append(f"\n  📁 Output Files:")
-    for f in sorted(os.listdir(out_dir)):
-        size = os.path.getsize(os.path.join(out_dir, f))
-        summary.append(f"    • {f} ({size:,} bytes)")
-
-    text = "\n".join(summary)
-    print(text)
-
-    with open(os.path.join(out_dir, "pipeline_summary.txt"), "w", encoding="utf-8") as f:
-        f.write(text)
+        result = compute_impact_score(metrics)
+        s["impact_score"] = result["impact_score"]
+        s["impact_components"] = result["components"]
+        
+        years = CURRENT_YEAR - s.get("launch_year", CURRENT_YEAR)
+        s["verdict"] = compute_verdict(result["impact_score"], metrics["reach_percent"], years)
+        
+        src = "🌐 LIVE" if s["scrape_status"] == "LIVE" else "📚 Research"
+        print(f"  {src} {s['short']:8s} → {s['impact_score']}/10 ({s['verdict']})")
+    
+    return schemes
 
 
-def stage4_dashboard(merged, scraped):
-    """Stage 4: Generate live dashboard_data.js for the web dashboard."""
+def stage4_analyze(schemes):
     print("\n" + "█" * 60)
-    print("  STAGE 4: GENERATING LIVE DASHBOARD DATA")
+    print("  STAGE 4: ANALYSIS & VISUALIZATION")
     print("█" * 60)
+    if not schemes:
+        print("  ❌ No data!")
+        return
+    from analysis import run_full_analysis
+    run_full_analysis(schemes)
 
+
+def stage5_dashboard(schemes, scraped):
+    print("\n" + "█" * 60)
+    print("  STAGE 5: GENERATING DASHBOARD DATA")
+    print("█" * 60)
+    
     base_dir = os.path.dirname(os.path.abspath(__file__))
-
-    # Build clean scheme list for JS
+    
     js_schemes = []
-    for m in merged:
+    for s in schemes:
         js_schemes.append({
-            "name": m["name"],
-            "short": m.get("short_code", ""),
-            "sector": m["sector"],
-            "launch_year": m["launch_year"],
-            "beneficiaries_lakh": m["beneficiaries_lakh"],
-            "budget_crore": m["budget_crore"],
-            "per_person_benefit": m.get("per_person_benefit", ""),
-            "target_group": m.get("target_group", ""),
-            "description": m.get("description", ""),
-            "achievements": m.get("achievements", []),
-            "challenges": m.get("challenges", []),
-            "verdict": m["verdict"],
-            "impact_score": m["impact_score"],
-            "reach_percent": m["reach_percent"],
-            "live_data": m.get("live_data_available", False),
-            "live_source": m.get("live_source", ""),
+            "name": s["name"], "short": s["short"], "sector": s["sector"],
+            "launch_year": s["launch_year"],
+            "beneficiaries_lakh": s["beneficiaries_lakh"],
+            "budget_crore": s.get("budget_crore", 0),
+            "disbursed_crore": s.get("disbursed_crore", 0),
+            "per_person_benefit": s.get("per_person_benefit", ""),
+            "target_group": s.get("target_group", ""),
+            "description": s.get("description", ""),
+            "achievements": s.get("achievements", []),
+            "challenges": s.get("challenges", []),
+            "verdict": s["verdict"],
+            "impact_score": s["impact_score"],
+            "impact_components": s.get("impact_components", {}),
+            "reach_percent": s.get("reach_percent", 0),
+            "data_source": s.get("data_source", ""),
+            "scrape_status": s.get("scrape_status", ""),
+            "golden_cards_issued": s.get("golden_cards_issued", 0),
+            "empanelled_hospitals": s.get("empanelled_hospitals", 0),
+            "claims_submitted": s.get("claims_submitted", 0),
+            "claims_settled_pct": s.get("claims_settled_pct", 0),
         })
-
-    # Build scrape summary
-    scrape_summary = {}
-    for name, res in scraped.items():
-        if isinstance(res, dict):
-            scrape_summary[name] = {
-                "status": res.get("status", "UNKNOWN"),
-                "source": res.get("source", ""),
-            }
-
+    
+    live_count = sum(1 for s in js_schemes if s["scrape_status"] == "LIVE")
     meta = {
         "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "pipeline_version": "3.1 — Hybrid (Research + Live Scrape)",
         "total_schemes": len(js_schemes),
         "total_beneficiaries_lakh": round(sum(s["beneficiaries_lakh"] for s in js_schemes), 1),
         "total_budget_crore": sum(s["budget_crore"] for s in js_schemes),
         "sectors": len(set(s["sector"] for s in js_schemes)),
-        "avg_impact": round(sum(s["impact_score"] for s in js_schemes) / len(js_schemes), 1),
-        "avg_reach": round(sum(s["reach_percent"] for s in js_schemes) / len(js_schemes)),
-        "live_matched": sum(1 for s in js_schemes if s["live_data"]),
-        "scrape_summary": scrape_summary,
+        "avg_impact": round(sum(s["impact_score"] for s in js_schemes) / max(len(js_schemes), 1), 1),
+        "live_matched": live_count,
+        "data_note": f"Impact scores COMPUTED via formula. {live_count} schemes with live portal data, rest from research.",
     }
-
+    
     js_content = (
-        "// ═══ AUTO-GENERATED BY PIPELINE — DO NOT EDIT ═══\n"
+        "// ═══ AUTO-GENERATED BY PIPELINE v3.1 — HYBRID DATA-DRIVEN ═══\n"
         f"// Generated: {meta['generated_at']}\n"
-        "// Re-run pipeline.py to update this data with latest scrapes\n\n"
+        "// Impact scores COMPUTED from data (not hardcoded)\n"
+        f"// {live_count} schemes with LIVE scraped data\n\n"
         f"const PIPELINE_META = {json.dumps(meta, indent=2, ensure_ascii=False)};\n\n"
         f"const SCHEMES = {json.dumps(js_schemes, indent=2, ensure_ascii=False)};\n"
     )
-
-    out_path = os.path.join(base_dir, "dashboard_data.js")
-    with open(out_path, "w", encoding="utf-8") as f:
+    
+    with open(os.path.join(base_dir, "dashboard_data.js"), "w", encoding="utf-8") as f:
         f.write(js_content)
+    
+    print(f"  ✅ dashboard_data.js ({len(js_content):,} bytes)")
+    print(f"  📊 {len(js_schemes)} schemes | {live_count} LIVE | All scores computed")
 
-    print(f"  ✅ dashboard_data.js generated ({len(js_content):,} bytes)")
-    print(f"  📊 {meta['total_schemes']} schemes | {meta['live_matched']} with live data")
-    print(f"  🌐 Open index.html to see the live dashboard!")
 
-
-# ══════════════════════════════════════════════════════════════
-#  MAIN — RUN FULL PIPELINE
-# ══════════════════════════════════════════════════════════════
 if __name__ == "__main__":
-    print("\n🚀 UP GOVERNMENT SCHEMES — FULL ANALYSIS PIPELINE")
-    print(f"   Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-
-    # Stage 1: Scrape
+    print("\n🚀 UP GOVERNMENT SCHEMES — PIPELINE v3.1 (HYBRID)")
+    print(f"   {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"   ⚡ Research baseline + live scraped overrides + computed scores\n")
+    
     scraped = stage1_scrape()
-
-    # Stage 2: Merge
-    merged = stage2_merge(scraped)
-
-    # Stage 3: Analyze
-    stage3_analyze(merged)
-
-    # Stage 4: Dashboard
-    stage4_dashboard(merged, scraped)
-
+    schemes = stage2_merge(scraped)
+    schemes = stage3_score(schemes)
+    stage4_analyze(schemes)
+    stage5_dashboard(schemes, scraped)
+    
     print("\n" + "█" * 60)
     print("  ✅ PIPELINE COMPLETE!")
-    print(f"  📁 All outputs in: {os.path.abspath('output')}")
-    print(f"  📁 Scraped data in: {os.path.abspath('scraped_data')}")
+    print(f"  📁 Outputs: {os.path.abspath('output')}")
     print(f"  🌐 Dashboard: {os.path.abspath('index.html')}")
+    print("  ⚡ All impact scores COMPUTED — not hardcoded")
     print("█" * 60 + "\n")

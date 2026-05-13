@@ -1,0 +1,6 @@
+﻿name,short,sector,launch_year,beneficiaries_lakh,budget_crore,disbursed_crore,impact_score,reach_percent,verdict,data_source,scrape_status
+Old Age Pension Scheme (SSPY),OAP,Social Security,2016,67.5,4061.29,4061.29,7.0,50,Success,sspy-up.gov.in,LIVE
+Widow Pension Scheme,WPS,Social Security,2016,26.13,783.83,783.83,6.4,25,Success,sspy-up.gov.in,LIVE
+Divyang Pension Scheme,DPS,Social Security,2016,11.05,331.4,331.4,6.2,25,Success,sspy-up.gov.in,LIVE
+Leprosy Pension Scheme,LPS,Social Security,2016,0.12,111.6,111.6,4.8,25,Mixed,sspy-up.gov.in,LIVE
+Wheat Procurement (FCS),WP,Food & Civil Supplies,2016,2.1,0.0,0.0,4.6,0,Mixed,fcs.up.gov.in,LIVE

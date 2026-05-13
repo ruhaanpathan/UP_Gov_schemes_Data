@@ -1,10 +1,8 @@
 {
   "source": "pmaymis.gov.in",
-  "scraped_at": "2026-05-10 16:39:05.849328",
+  "scraped_at": "2026-05-13 21:14:37.625576",
+  "parsed_data": {},
   "status": "SCRAPED",
   "url": "https://pmaymis.gov.in",
-  "page_size": 61725,
-  "title": "\r\n\tPMAY-HFA(Urban)\r\n",
-  "stats": [],
-  "tables": []
+  "page_size": 61725
 }

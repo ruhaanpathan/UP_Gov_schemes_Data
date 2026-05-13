@@ -1,14 +1,17 @@
 {
   "source": "ayushmanup.in",
-  "scraped_at": "2026-05-10 16:39:22.569402",
+  "scraped_at": "2026-05-13 21:15:06.968303",
+  "parsed_data": {
+    "total_beneficiaries": 95682304.0,
+    "golden_cards_issued": 56800054.0,
+    "empanelled_hospitals": 6313.0,
+    "preauth_requests": 9191580.0,
+    "claims_submitted": 8831289.0,
+    "beneficiaries_lakh": 956.82,
+    "beneficiaries_crore": 9.57,
+    "card_coverage_pct": 59.4
+  },
   "status": "SCRAPED",
   "url": "https://ayushmanup.in",
-  "page_size": 243987,
-  "title": "\r\n\tAyushman Bharat Uttar Pradesh\r\n",
-  "stats": [
-    "95,682,304NUMBER OF BENEFICARIES56,800,054GOLDEN CARD ISSUED6313EMPANELLED HOSPITALS9,191,580TOTAL PRE- AUTHORIZATIONS R",
-    "9,191,580TOTAL PRE- AUTHORIZATIONS REQUESTS8831289TOTAL CLAIMS SUBMITTED91.87CLAIMS SETTLED (%)",
-    "91.87CLAIMS SETTLED (%)"
-  ],
-  "tables": []
+  "page_size": 243987
 }
