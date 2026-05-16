@@ -54,8 +54,19 @@ def stage1_scrape():
     return run_all_scrapers()
 
 
-def stage2_merge(scraped):
+def stage1b_validate(scraped):
+    """Validate scraped data and return auto-fix overrides."""
+    print("\n" + "█" * 60)
+    print("  STAGE 1.5: VALIDATING SCRAPED DATA")
+    print("█" * 60)
+    from validate_data import run_validation
+    validator, overrides = run_validation(scraped)
+    return overrides
+
+
+def stage2_merge(scraped, validation_overrides=None):
     """Merge research baseline with live scraped overrides."""
+    v_overrides = validation_overrides or {}
     print("\n" + "█" * 60)
     print("  STAGE 2: MERGING RESEARCH DATA + LIVE SCRAPED OVERRIDES")
     print("█" * 60)
@@ -144,8 +155,14 @@ def stage2_merge(scraped):
         elif "ayushman" in name_lower:
             if ayushman_data.get("total_beneficiaries") or ayushman_data.get("golden_cards_issued"):
                 ben = ayushman_data.get("beneficiaries_lakh", 0)
+                # FIX: Portal shows ENROLLED population (~956L), not treated patients (~45L)
+                # Validation auto-caps this to the research baseline
+                if "ayushman_ben_cap" in v_overrides:
+                    ben = min(ben, v_overrides["ayushman_ben_cap"])
+                    print(f"  🔧 Ayushman: capped beneficiaries {ayushman_data.get('beneficiaries_lakh',0)}L → {ben}L (enrolled≠treated)")
                 if ben > 0:
                     entry["beneficiaries_lakh"] = ben
+                entry["enrolled_population_lakh"] = ayushman_data.get("beneficiaries_lakh", 0)
                 entry["golden_cards_issued"] = ayushman_data.get("golden_cards_issued", 0)
                 entry["empanelled_hospitals"] = ayushman_data.get("empanelled_hospitals", 0)
                 entry["claims_submitted"] = ayushman_data.get("claims_submitted", 0)
@@ -316,20 +333,50 @@ def stage5_dashboard(schemes, scraped):
     print(f"  📊 {len(js_schemes)} schemes | {live_count} LIVE | All scores computed")
 
 
+def stage6_deep_validate(schemes):
+    """Deep policy validation: 7 dimensions per scheme."""
+    print("\n" + "█" * 60)
+    print("  STAGE 6: DEEP POLICY VALIDATION (7 DIMENSIONS)")
+    print("█" * 60)
+    from scheme_validator import validate_all_schemes
+    from validation_report_gen import generate_reports
+
+    results = validate_all_schemes(schemes)
+    json_path, html_path = generate_reports(results)
+
+    # Console summary
+    print(f"\n  📊 Validated {len(results)} schemes across 7 dimensions")
+    print(f"  ── Top 3 ──")
+    for r in results[:3]:
+        print(f"     🏆 {r['short']:6s} {r['overall_validation_score']}/10 — {r['validation_verdict']}")
+    print(f"  ── Bottom 3 ──")
+    for r in results[-3:]:
+        print(f"     ⚠️  {r['short']:6s} {r['overall_validation_score']}/10 — {r['validation_verdict']}")
+
+    avg = round(sum(r['overall_validation_score'] for r in results) / max(len(results),1), 1)
+    print(f"\n  📄 JSON: {json_path}")
+    print(f"  🌐 HTML: {html_path}")
+    print(f"  📊 Average validation score: {avg}/10")
+    return results
+
+
 if __name__ == "__main__":
-    print("\n🚀 UP GOVERNMENT SCHEMES — PIPELINE v3.1 (HYBRID)")
+    print("\n🚀 UP GOVERNMENT SCHEMES — PIPELINE v3.2 (HYBRID + VALIDATED)")
     print(f"   {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"   ⚡ Research baseline + live scraped overrides + computed scores\n")
+    print(f"   ⚡ Scrape → Validate → Merge → Score → Analyze → Dashboard → Deep Validate\n")
     
     scraped = stage1_scrape()
-    schemes = stage2_merge(scraped)
+    v_overrides = stage1b_validate(scraped)
+    schemes = stage2_merge(scraped, v_overrides)
     schemes = stage3_score(schemes)
     stage4_analyze(schemes)
     stage5_dashboard(schemes, scraped)
+    stage6_deep_validate(schemes)
     
     print("\n" + "█" * 60)
     print("  ✅ PIPELINE COMPLETE!")
     print(f"  📁 Outputs: {os.path.abspath('output')}")
     print(f"  🌐 Dashboard: {os.path.abspath('index.html')}")
-    print("  ⚡ All impact scores COMPUTED — not hardcoded")
+    print(f"  📊 Policy Validation: {os.path.abspath('output/scheme_validation_report.html')}")
+    print("  ⚡ All data VALIDATED + SCORED + POLICY ANALYZED")
     print("█" * 60 + "\n")

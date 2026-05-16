@@ -1,0 +1,248 @@
+
+══════════════════════════════════════════════════════════════════════
+  DATA-DRIVEN ANALYSIS REPORT (Computed Scores)
+══════════════════════════════════════════════════════════════════════
+
+  ⚡ Impact scores COMPUTED via formula — not hardcoded
+  🌐 5 schemes with LIVE scraped data
+  📚 20 schemes from research baseline
+
+📊 OVERVIEW
+   Total Schemes              : 25
+   Total Beneficiaries        : 689.0 Lakh (6.89 Crore)
+   Total Budget               : ₹151,976 Crore (₹1.52 Lakh Crore)
+   Sectors Covered            : 8
+   Avg Impact Score (computed) : 4.8/10
+   Avg Reach                  : 52%
+
+══════════════════════════════════════════════════════════════════════
+  SECTOR-WISE BREAKDOWN
+══════════════════════════════════════════════════════════════════════
+
+  🏷️  Education
+      Schemes: 3.0 | Beneficiaries: 240.1L | Budget: ₹10,500Cr
+      Avg Impact: 5.4/10 | Avg Reach: 80%
+
+  🏷️  Social Security
+      Schemes: 4.0 | Beneficiaries: 109.7L | Budget: ₹13,140Cr
+      Avg Impact: 4.9/10 | Avg Reach: 57%
+
+  🏷️  Agriculture
+      Schemes: 4.0 | Beneficiaries: 97.5L | Budget: ₹37,800Cr
+      Avg Impact: 4.2/10 | Avg Reach: 32%
+
+  🏷️  Women & Girl Child
+      Schemes: 5.0 | Beneficiaries: 82.8L | Budget: ₹5,346Cr
+      Avg Impact: 4.5/10 | Avg Reach: 54%
+
+  🏷️  Health
+      Schemes: 2.0 | Beneficiaries: 55.0L | Budget: ₹8,240Cr
+      Avg Impact: 5.0/10 | Avg Reach: 58%
+
+  🏷️  Housing
+      Schemes: 2.0 | Beneficiaries: 53.4L | Budget: ₹70,000Cr
+      Avg Impact: 5.6/10 | Avg Reach: 85%
+
+  🏷️  Employment & Industry
+      Schemes: 4.0 | Beneficiaries: 48.0L | Budget: ₹6,950Cr
+      Avg Impact: 4.5/10 | Avg Reach: 36%
+
+  🏷️  Food & Civil Supplies
+      Schemes: 1.0 | Beneficiaries: 2.5L | Budget: ₹0Cr
+      Avg Impact: 4.6/10 | Avg Reach: 0%
+
+══════════════════════════════════════════════════════════════════════
+  TOP 10 BY BENEFICIARIES
+══════════════════════════════════════════════════════════════════════
+   1. 📚 Free School Bag & Uniform Scheme
+      160.0L | ₹2,000Cr | Impact 6.6/10 | Success
+   2. 📚 UP Kisan Rin Mochan Yojana (Loan Waiver)
+      86.0L | ₹36,000Cr | Impact 5.1/10 | Moderate Success
+   3. 📚 Pre-Matric & Post-Matric Scholarship
+      80.0L | ₹8,000Cr | Impact 6.0/10 | Success
+   4. 🌐 Old Age Pension Scheme (SSPY)
+      67.5L | ₹6,700Cr | Impact 6.1/10 | Success
+   5. 📚 Mission Shakti
+      50.0L | ₹3,146Cr | Impact 5.1/10 | Moderate Success
+   6. 🌐 Ayushman Bharat PMJAY (UP Implementation)
+      45.0L | ₹7,040Cr | Impact 5.7/10 | Moderate Success
+   7. 📚 PMAY-Gramin (Rural Housing, UP)
+      36.4L | ₹45,000Cr | Impact 5.9/10 | Moderate Success
+   8. 📚 Mukhyamantri Kanya Sumangala Yojana
+      26.8L | ₹1,200Cr | Impact 5.5/10 | Moderate Success
+   9. 🌐 Widow Pension Scheme (Nirashrit Mahila)
+      26.1L | ₹3,500Cr | Impact 4.6/10 | Mixed
+  10. 📚 One District One Product (ODOP)
+      25.0L | ₹6,000Cr | Impact 5.5/10 | Moderate Success
+
+══════════════════════════════════════════════════════════════════════
+  ALL SCHEMES (Ranked by Computed Impact Score)
+══════════════════════════════════════════════════════════════════════
+
+   1. ✅ Free School Bag & Uniform Scheme (FSBU) 📚
+      Impact: 6.6/10 | Verdict: Success | Source: research
+      Beneficiaries: 160.0L | Budget: ₹2,000Cr
+      Components: Scale=5.6 Eff=7.8 Disb=3.0 Cov=8.5 Long=9.0
+
+   2. ✅ Old Age Pension Scheme (SSPY) (OAP) 🌐
+      Impact: 6.1/10 | Verdict: Success | Source: sspy-up.gov.in
+      Beneficiaries: 67.5L | Budget: ₹6,700Cr
+      Components: Scale=4.9 Eff=6.0 Disb=6.1 Cov=5.0 Long=10.0
+
+   3. ✅ Pre-Matric & Post-Matric Scholarship (SCHOL) 📚
+      Impact: 6.0/10 | Verdict: Success | Source: research
+      Beneficiaries: 80.0L | Budget: ₹8,000Cr
+      Components: Scale=5.0 Eff=6.0 Disb=3.0 Cov=7.0 Long=10.0
+
+   4. 👍 PMAY-Gramin (Rural Housing, UP) (PMAYG) 📚
+      Impact: 5.9/10 | Verdict: Moderate Success | Source: rhreporting.nic.in (page only)
+      Beneficiaries: 36.4L | Budget: ₹45,000Cr
+      Components: Scale=4.4 Eff=3.8 Disb=3.0 Cov=9.5 Long=10.0
+
+   5. 👍 Ayushman Bharat PMJAY (UP Implementation) (AB) 🌐
+      Impact: 5.7/10 | Verdict: Moderate Success | Source: ayushmanup.in
+      Beneficiaries: 45.0L | Budget: ₹7,040Cr
+      Components: Scale=4.5 Eff=5.6 Disb=3.0 Cov=8.2 Long=8.0
+
+   6. 👍 Mukhyamantri Kanya Sumangala Yojana (MKSY) 📚
+      Impact: 5.5/10 | Verdict: Moderate Success | Source: mksy.up.gov.in (page only)
+      Beneficiaries: 26.8L | Budget: ₹1,200Cr
+      Components: Scale=4.1 Eff=6.7 Disb=3.0 Cov=7.2 Long=7.0
+
+   7. 👍 One District One Product (ODOP) (ODOP) 📚
+      Impact: 5.5/10 | Verdict: Moderate Success | Source: odopup.in (page only)
+      Beneficiaries: 25.0L | Budget: ₹6,000Cr
+      Components: Scale=4.0 Eff=5.2 Disb=3.0 Cov=8.0 Long=8.0
+
+   8. 👍 PMAY-Urban (Urban Housing, UP) (PMAYU) 📚
+      Impact: 5.3/10 | Verdict: Moderate Success | Source: pmaymis.gov.in (page only)
+      Beneficiaries: 17.0L | Budget: ₹25,000Cr
+      Components: Scale=3.7 Eff=3.7 Disb=3.0 Cov=7.5 Long=10.0
+
+   9. 👍 Mission Shakti (MS) 📚
+      Impact: 5.1/10 | Verdict: Moderate Success | Source: research
+      Beneficiaries: 50.0L | Budget: ₹3,146Cr
+      Components: Scale=4.6 Eff=6.4 Disb=3.0 Cov=6.0 Long=6.0
+
+  10. 👍 UP Kisan Rin Mochan Yojana (Loan Waiver) (KRM) 📚
+      Impact: 5.1/10 | Verdict: Moderate Success | Source: research
+      Beneficiaries: 86.0L | Budget: ₹36,000Cr
+      Components: Scale=5.1 Eff=4.8 Disb=3.0 Cov=4.5 Long=9.0
+
+  11. ⚠️ Sevayojan Portal (Employment Exchange) (SEV) 📚
+      Impact: 4.8/10 | Verdict: Mixed | Source: research
+      Beneficiaries: 15.0L | Budget: ₹150Cr
+      Components: Scale=3.6 Eff=8.0 Disb=3.0 Cov=2.5 Long=8.0
+
+  12. ⚠️ Mukhyamantri Samuhik Vivah Yojana (MSVY) 📚
+      Impact: 4.7/10 | Verdict: Mixed | Source: research
+      Beneficiaries: 3.5L | Budget: ₹600Cr
+      Components: Scale=2.3 Eff=5.5 Disb=3.0 Cov=5.5 Long=9.0
+
+  13. ⚠️ Widow Pension Scheme (Nirashrit Mahila) (WPS) 🌐
+      Impact: 4.6/10 | Verdict: Mixed | Source: sspy-up.gov.in
+      Beneficiaries: 26.1L | Budget: ₹3,500Cr
+      Components: Scale=4.1 Eff=5.7 Disb=2.2 Cov=2.5 Long=10.0
+
+  14. ⚠️ Wheat Procurement (FCS) (WP) 🌐
+      Impact: 4.6/10 | Verdict: Mixed | Source: fcs.up.gov.in
+      Beneficiaries: 2.5L | Budget: ₹0Cr
+      Components: Scale=2.0 Eff=5.0 Disb=5.0 Cov=3.0 Long=10.0
+
+  15. ⚠️ Kisan Asaan Kist Yojana (KAK) 📚
+      Impact: 4.5/10 | Verdict: Mixed | Source: research
+      Beneficiaries: 8.0L | Budget: ₹400Cr
+      Components: Scale=3.0 Eff=6.6 Disb=3.0 Cov=3.0 Long=8.0
+
+  16. ⚠️ Rashtriya Parivarik Laabh Yojana (RPLY) 📚
+      Impact: 4.5/10 | Verdict: Mixed | Source: research
+      Beneficiaries: 5.0L | Budget: ₹1,500Cr
+      Components: Scale=2.6 Eff=5.0 Disb=3.0 Cov=3.5 Long=10.0
+
+  17. ⚠️ Divyang Pension Scheme (DPS) 🌐
+      Impact: 4.4/10 | Verdict: Mixed | Source: sspy-up.gov.in
+      Beneficiaries: 11.1L | Budget: ₹1,440Cr
+      Components: Scale=3.3 Eff=5.8 Disb=2.3 Cov=2.5 Long=10.0
+
+  18. ⚠️ Mukhyamantri Jan Arogya Yojana (MJAY) 📚
+      Impact: 4.3/10 | Verdict: Mixed | Source: research
+      Beneficiaries: 10.0L | Budget: ₹1,200Cr
+      Components: Scale=3.2 Eff=5.8 Disb=3.0 Cov=3.5 Long=7.0
+
+  19. ⚠️ Kaushal Satrang / YUVA Hub (KS) 📚
+      Impact: 4.0/10 | Verdict: Mixed | Source: research
+      Beneficiaries: 5.0L | Budget: ₹500Cr
+      Components: Scale=2.6 Eff=6.0 Disb=3.0 Cov=1.8 Long=8.0
+
+  20. ❌ Mukhyamantri Krishak Durghatna Kalyan Yojana (MKDKY) 📚
+      Impact: 3.9/10 | Verdict: Underperformed | Source: research
+      Beneficiaries: 2.0L | Budget: ₹600Cr
+      Components: Scale=1.8 Eff=5.0 Disb=3.0 Cov=4.0 Long=7.0
+
+  21. ❌ BC Sakhi (Banking Correspondent) (BCS) 📚
+      Impact: 3.9/10 | Verdict: Underperformed | Source: research
+      Beneficiaries: 0.5L | Budget: ₹200Cr
+      Components: Scale=0.6 Eff=4.8 Disb=3.0 Cov=6.5 Long=6.0
+
+  22. ❌ CM Apprenticeship Promotion Scheme (CMAPS) (CMAPS) 📚
+      Impact: 3.8/10 | Verdict: Underperformed | Source: research
+      Beneficiaries: 3.0L | Budget: ₹300Cr
+      Components: Scale=2.2 Eff=6.0 Disb=3.0 Cov=2.0 Long=7.0
+
+  23. ❌ Atal Residential Schools (Atal Awasiya Vidyalaya) (ARS) 📚
+      Impact: 3.6/10 | Verdict: Underperformed | Source: research
+      Beneficiaries: 0.1L | Budget: ₹500Cr
+      Components: Scale=0.0 Eff=2.6 Disb=3.0 Cov=8.5 Long=5.0
+
+  24. ❌ Kisan Uday Yojana (Solar Pumps) (KUY) 📚
+      Impact: 3.4/10 | Verdict: Underperformed | Source: research
+      Beneficiaries: 1.5L | Budget: ₹800Cr
+      Components: Scale=1.6 Eff=4.5 Disb=3.0 Cov=1.5 Long=8.0
+
+  25. ❌ Mahila Samarthya Yojana (MSY) 📚
+      Impact: 3.4/10 | Verdict: Underperformed | Source: research
+      Beneficiaries: 2.0L | Budget: ₹200Cr
+      Components: Scale=1.8 Eff=6.0 Disb=3.0 Cov=2.0 Long=5.0
+
+══════════════════════════════════════════════════════════════════════
+  VERDICT SUMMARY
+══════════════════════════════════════════════════════════════════════
+
+  ✅ SUCCESS (3 schemes)
+      🌐 Old Age Pension Scheme (SSPY) — 67.5L, Score 6.1/10
+      📚 Pre-Matric & Post-Matric Scholarship — 80.0L, Score 6.0/10
+      📚 Free School Bag & Uniform Scheme — 160.0L, Score 6.6/10
+
+  👍 MODERATE SUCCESS (7 schemes)
+      📚 Mukhyamantri Kanya Sumangala Yojana — 26.8L, Score 5.5/10
+      📚 Mission Shakti — 50.0L, Score 5.1/10
+      📚 UP Kisan Rin Mochan Yojana (Loan Waiver) — 86.0L, Score 5.1/10
+      📚 One District One Product (ODOP) — 25.0L, Score 5.5/10
+      🌐 Ayushman Bharat PMJAY (UP Implementation) — 45.0L, Score 5.7/10
+      📚 PMAY-Gramin (Rural Housing, UP) — 36.4L, Score 5.9/10
+      📚 PMAY-Urban (Urban Housing, UP) — 17.0L, Score 5.3/10
+
+  ⚠️ MIXED (9 schemes)
+      📚 Mukhyamantri Samuhik Vivah Yojana — 3.5L, Score 4.7/10
+      🌐 Widow Pension Scheme (Nirashrit Mahila) — 26.1L, Score 4.6/10
+      🌐 Divyang Pension Scheme — 11.1L, Score 4.4/10
+      📚 Rashtriya Parivarik Laabh Yojana — 5.0L, Score 4.5/10
+      📚 Kisan Asaan Kist Yojana — 8.0L, Score 4.5/10
+      📚 Sevayojan Portal (Employment Exchange) — 15.0L, Score 4.8/10
+      📚 Kaushal Satrang / YUVA Hub — 5.0L, Score 4.0/10
+      📚 Mukhyamantri Jan Arogya Yojana — 10.0L, Score 4.3/10
+      🌐 Wheat Procurement (FCS) — 2.5L, Score 4.6/10
+
+  ❌ UNDERPERFORMED (6 schemes)
+      📚 Mukhyamantri Krishak Durghatna Kalyan Yojana — 2.0L, Score 3.9/10
+      📚 Kisan Uday Yojana (Solar Pumps) — 1.5L, Score 3.4/10
+      📚 CM Apprenticeship Promotion Scheme (CMAPS) — 3.0L, Score 3.8/10
+      📚 Atal Residential Schools (Atal Awasiya Vidyalaya) — 0.1L, Score 3.6/10
+      📚 BC Sakhi (Banking Correspondent) — 0.5L, Score 3.9/10
+      📚 Mahila Samarthya Yojana — 2.0L, Score 3.4/10
+
+══════════════════════════════════════════════════════════════════════
+  IMPACT SCORE FORMULA
+══════════════════════════════════════════════════════════════════════
+  Score = 0.25×Scale + 0.20×Efficiency + 0.20×Disbursement + 0.20×Coverage + 0.15×Longevity
+  ⚡ All scores computed from data. 🌐 = live scraped, 📚 = research baseline

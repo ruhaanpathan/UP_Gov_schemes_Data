@@ -1,172 +1,172 @@
-[21:14:10] ℹ️ ============================================================
-[21:14:10] ℹ️   UP GOVERNMENT SCHEMES — LIVE DATA PIPELINE v3.0
-[21:14:10] ℹ️   Stage 1: Scraping Government Portals
-[21:14:10] ℹ️   Enhanced: Structured parsing + Selenium fallback
-[21:14:10] ℹ️ ============================================================
-[21:14:10] ℹ️ ━━━ Scraper 1: SSPY Pension Portal ━━━
-[21:14:10] 🌐 Fetching: https://sspy-up.gov.in
-[21:14:14] ✅   ✓ Got 50115 bytes
-[21:14:14] ✅   📊 Parsed 4 pension schemes with real numbers
-[21:14:14] ℹ️      • Old Age Pension: 6,750,000 beneficiaries, ₹4,061.29 Cr
-[21:14:14] ℹ️      • Widow Pension: 2,612,786 beneficiaries, ₹783.83 Cr
-[21:14:14] ℹ️      • Divyang Pension: 1,104,703 beneficiaries, ₹331.40 Cr
-[21:14:14] ℹ️      • Leprosy Pension: 12,400 beneficiaries, ₹111.60 Cr
-[21:14:14] ✅   Saved → 01_sspy_pensions.json
-[21:14:14] ℹ️ ━━━ Scraper 2: Kanya Sumangala Yojana ━━━
-[21:14:14] 🌐 Fetching: https://mksy.up.gov.in
-[21:14:17] ✅   ✓ Got 120391 bytes
-[21:14:17] ✅   Saved → 02_mksy.json
-[21:14:17] ℹ️ ━━━ Scraper 3: PMAY Rural Housing ━━━
-[21:14:31] ⚠️   Selenium not available: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+[10:11:42] ℹ️ ============================================================
+[10:11:42] ℹ️   UP GOVERNMENT SCHEMES — LIVE DATA PIPELINE v3.0
+[10:11:42] ℹ️   Stage 1: Scraping Government Portals
+[10:11:42] ℹ️   Enhanced: Structured parsing + Selenium fallback
+[10:11:42] ℹ️ ============================================================
+[10:11:42] ℹ️ ━━━ Scraper 1: SSPY Pension Portal ━━━
+[10:11:42] 🌐 Fetching: https://sspy-up.gov.in
+[10:11:45] ✅   ✓ Got 51239 bytes
+[10:11:45] ✅   📊 Parsed 4 pension schemes with real numbers
+[10:11:45] ℹ️      • Old Age Pension: 6,750,000 beneficiaries, ₹4,061.29 Cr
+[10:11:45] ℹ️      • Widow Pension: 2,612,786 beneficiaries, ₹783.83 Cr
+[10:11:45] ℹ️      • Divyang Pension: 1,104,703 beneficiaries, ₹331.40 Cr
+[10:11:45] ℹ️      • Leprosy Pension: 12,400 beneficiaries, ₹111.60 Cr
+[10:11:45] ✅   Saved → 01_sspy_pensions.json
+[10:11:45] ℹ️ ━━━ Scraper 2: Kanya Sumangala Yojana ━━━
+[10:11:45] 🌐 Fetching: https://mksy.up.gov.in
+[10:11:48] ✅   ✓ Got 66453 bytes
+[10:11:48] ✅   Saved → 02_mksy.json
+[10:11:48] ℹ️ ━━━ Scraper 3: PMAY Rural Housing ━━━
+[10:11:55] ⚠️   Selenium not available: Message: session not created: This version of ChromeDriver only supports Chrome version 114
 Current browser version is 148.0.7778.97 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
 Stacktrace:
 Backtrace:
-	GetHandleVerifier [0x0083A813+48355]
-	(No symbol) [0x007CC4B1]
-	(No symbol) [0x006D5358]
-	(No symbol) [0x006F61AC]
-	(No symbol) [0x006F1EF3]
-	(No symbol) [0x006F0579]
-	(No symbol) [0x00720C55]
-	(No symbol) [0x0072093C]
-	(No symbol) [0x0071A536]
-	(No symbol) [0x006F82DC]
-	(No symbol) [0x006F93DD]
-	GetHandleVerifier [0x00A9AABD+2539405]
-	GetHandleVerifier [0x00ADA78F+2800735]
-	GetHandleVerifier [0x00AD456C+2775612]
-	GetHandleVerifier [0x008C51E0+616112]
-	(No symbol) [0x007D5F8C]
-	(No symbol) [0x007D2328]
-	(No symbol) [0x007D240B]
-	(No symbol) [0x007C4FF7]
-	BaseThreadInitThunk [0x75095D49+25]
-	RtlInitializeExceptionChain [0x7702D83B+107]
-	RtlGetAppContainerNamedObjectPath [0x7702D7C1+561]
+	GetHandleVerifier [0x0108A813+48355]
+	(No symbol) [0x0101C4B1]
+	(No symbol) [0x00F25358]
+	(No symbol) [0x00F461AC]
+	(No symbol) [0x00F41EF3]
+	(No symbol) [0x00F40579]
+	(No symbol) [0x00F70C55]
+	(No symbol) [0x00F7093C]
+	(No symbol) [0x00F6A536]
+	(No symbol) [0x00F482DC]
+	(No symbol) [0x00F493DD]
+	GetHandleVerifier [0x012EAABD+2539405]
+	GetHandleVerifier [0x0132A78F+2800735]
+	GetHandleVerifier [0x0132456C+2775612]
+	GetHandleVerifier [0x011151E0+616112]
+	(No symbol) [0x01025F8C]
+	(No symbol) [0x01022328]
+	(No symbol) [0x0102240B]
+	(No symbol) [0x01014FF7]
+	BaseThreadInitThunk [0x76265D49+25]
+	RtlInitializeExceptionChain [0x7766D83B+107]
+	RtlGetAppContainerNamedObjectPath [0x7766D7C1+561]
 
-[21:14:31] 🌐 Fetching: https://rhreporting.nic.in/netiay/newreport.aspx
-[21:14:37] ✅   ✓ Got 76010 bytes
-[21:14:37] ✅   Saved → 03_pmay_rural.json
-[21:14:37] ℹ️ ━━━ Scraper 4: PMAY Urban Housing ━━━
-[21:14:52] ⚠️   Selenium not available: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+[10:11:55] 🌐 Fetching: https://rhreporting.nic.in/netiay/newreport.aspx
+[10:11:57] ✅   ✓ Got 75943 bytes
+[10:11:57] ✅   Saved → 03_pmay_rural.json
+[10:11:57] ℹ️ ━━━ Scraper 4: PMAY Urban Housing ━━━
+[10:12:04] ⚠️   Selenium not available: Message: session not created: This version of ChromeDriver only supports Chrome version 114
 Current browser version is 148.0.7778.97 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
 Stacktrace:
 Backtrace:
-	GetHandleVerifier [0x0047A813+48355]
-	(No symbol) [0x0040C4B1]
-	(No symbol) [0x00315358]
-	(No symbol) [0x003361AC]
-	(No symbol) [0x00331EF3]
-	(No symbol) [0x00330579]
-	(No symbol) [0x00360C55]
-	(No symbol) [0x0036093C]
-	(No symbol) [0x0035A536]
-	(No symbol) [0x003382DC]
-	(No symbol) [0x003393DD]
-	GetHandleVerifier [0x006DAABD+2539405]
-	GetHandleVerifier [0x0071A78F+2800735]
-	GetHandleVerifier [0x0071456C+2775612]
-	GetHandleVerifier [0x005051E0+616112]
-	(No symbol) [0x00415F8C]
-	(No symbol) [0x00412328]
-	(No symbol) [0x0041240B]
-	(No symbol) [0x00404FF7]
-	BaseThreadInitThunk [0x75095D49+25]
-	RtlInitializeExceptionChain [0x7702D83B+107]
-	RtlGetAppContainerNamedObjectPath [0x7702D7C1+561]
+	GetHandleVerifier [0x00FEA813+48355]
+	(No symbol) [0x00F7C4B1]
+	(No symbol) [0x00E85358]
+	(No symbol) [0x00EA61AC]
+	(No symbol) [0x00EA1EF3]
+	(No symbol) [0x00EA0579]
+	(No symbol) [0x00ED0C55]
+	(No symbol) [0x00ED093C]
+	(No symbol) [0x00ECA536]
+	(No symbol) [0x00EA82DC]
+	(No symbol) [0x00EA93DD]
+	GetHandleVerifier [0x0124AABD+2539405]
+	GetHandleVerifier [0x0128A78F+2800735]
+	GetHandleVerifier [0x0128456C+2775612]
+	GetHandleVerifier [0x010751E0+616112]
+	(No symbol) [0x00F85F8C]
+	(No symbol) [0x00F82328]
+	(No symbol) [0x00F8240B]
+	(No symbol) [0x00F74FF7]
+	BaseThreadInitThunk [0x76265D49+25]
+	RtlInitializeExceptionChain [0x7766D83B+107]
+	RtlGetAppContainerNamedObjectPath [0x7766D7C1+561]
 
-[21:14:52] 🌐 Fetching: https://pmaymis.gov.in
-[21:14:55] ✅   ✓ Got 61725 bytes
-[21:14:55] ✅   Saved → 04_pmay_urban.json
-[21:14:55] ℹ️ ━━━ Scraper 5: ODOP Portal ━━━
-[21:15:04] ⚠️   Selenium not available: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+[10:12:04] 🌐 Fetching: https://pmaymis.gov.in
+[10:12:07] ✅   ✓ Got 61725 bytes
+[10:12:07] ✅   Saved → 04_pmay_urban.json
+[10:12:07] ℹ️ ━━━ Scraper 5: ODOP Portal ━━━
+[10:12:13] ⚠️   Selenium not available: Message: session not created: This version of ChromeDriver only supports Chrome version 114
 Current browser version is 148.0.7778.97 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
 Stacktrace:
 Backtrace:
-	GetHandleVerifier [0x00D8A813+48355]
-	(No symbol) [0x00D1C4B1]
-	(No symbol) [0x00C25358]
-	(No symbol) [0x00C461AC]
-	(No symbol) [0x00C41EF3]
-	(No symbol) [0x00C40579]
-	(No symbol) [0x00C70C55]
-	(No symbol) [0x00C7093C]
-	(No symbol) [0x00C6A536]
-	(No symbol) [0x00C482DC]
-	(No symbol) [0x00C493DD]
-	GetHandleVerifier [0x00FEAABD+2539405]
-	GetHandleVerifier [0x0102A78F+2800735]
-	GetHandleVerifier [0x0102456C+2775612]
-	GetHandleVerifier [0x00E151E0+616112]
-	(No symbol) [0x00D25F8C]
-	(No symbol) [0x00D22328]
-	(No symbol) [0x00D2240B]
-	(No symbol) [0x00D14FF7]
-	BaseThreadInitThunk [0x75095D49+25]
-	RtlInitializeExceptionChain [0x7702D83B+107]
-	RtlGetAppContainerNamedObjectPath [0x7702D7C1+561]
+	GetHandleVerifier [0x00C3A813+48355]
+	(No symbol) [0x00BCC4B1]
+	(No symbol) [0x00AD5358]
+	(No symbol) [0x00AF61AC]
+	(No symbol) [0x00AF1EF3]
+	(No symbol) [0x00AF0579]
+	(No symbol) [0x00B20C55]
+	(No symbol) [0x00B2093C]
+	(No symbol) [0x00B1A536]
+	(No symbol) [0x00AF82DC]
+	(No symbol) [0x00AF93DD]
+	GetHandleVerifier [0x00E9AABD+2539405]
+	GetHandleVerifier [0x00EDA78F+2800735]
+	GetHandleVerifier [0x00ED456C+2775612]
+	GetHandleVerifier [0x00CC51E0+616112]
+	(No symbol) [0x00BD5F8C]
+	(No symbol) [0x00BD2328]
+	(No symbol) [0x00BD240B]
+	(No symbol) [0x00BC4FF7]
+	BaseThreadInitThunk [0x76265D49+25]
+	RtlInitializeExceptionChain [0x7766D83B+107]
+	RtlGetAppContainerNamedObjectPath [0x7766D7C1+561]
 
-[21:15:04] 🌐 Fetching: http://odopup.in
-[21:15:06] ✅   ✓ Got 647 bytes
-[21:15:06] ✅   Saved → 05_odop.json
-[21:15:06] ℹ️ ━━━ Scraper 6: Ayushman Bharat UP ━━━
-[21:15:06] 🌐 Fetching: https://ayushmanup.in
-[21:15:10] ✅   ✓ Got 243987 bytes
-[21:15:10] ℹ️      • total_beneficiaries: 95,682,304
-[21:15:10] ℹ️      • golden_cards_issued: 56,800,054
-[21:15:10] ℹ️      • empanelled_hospitals: 6,313
-[21:15:10] ℹ️      • preauth_requests: 9,191,580
-[21:15:10] ℹ️      • claims_submitted: 8,831,289
-[21:15:10] ✅   Saved → 06_ayushman.json
-[21:15:10] ℹ️ ━━━ Scraper 7: UP Government Portal ━━━
-[21:15:10] 🌐 Fetching: https://up.gov.in/en/page/important-government-schemes
-[21:15:12] ✅   ✓ Got 84 bytes
-[21:15:12] ℹ️   Also checking UP FCS portal...
-[21:15:12] 🌐 Fetching: https://fcs.up.gov.in
-[21:15:15] ✅   ✓ Got 94401 bytes
-[21:15:15] ✅   Saved → 07_up_gov.json
-[21:15:15] ℹ️ ━━━ Scraper 8: UP Scholarship Portal ━━━
-[21:15:15] 🌐 Fetching: https://scholarship.up.gov.in
-[21:15:16] ⚠️   Attempt 1: HTTPSConnectionPool(host='scholarship.up.gov.in', port=443): Max retries exceede
-[21:15:19] ⚠️   Attempt 2: HTTPSConnectionPool(host='scholarship.up.gov.in', port=443): Max retries exceede
-[21:15:22] ⚠️   Attempt 3: HTTPSConnectionPool(host='scholarship.up.gov.in', port=443): Max retries exceede
-[21:15:25] ❌   All attempts failed for https://scholarship.up.gov.in
-[21:15:25] 🌐 Fetching: http://scholarship.up.gov.in
-[21:15:26] ⚠️   Attempt 1: HTTP 503 - 503 Server Error: Service Unavailable for url: http://scholarship.up.gov.in/
-[21:15:28] ⚠️   Attempt 2: HTTP 503 - 503 Server Error: Service Unavailable for url: http://scholarship.up.gov.in/
-[21:15:30] ⚠️   Attempt 3: HTTP 503 - 503 Server Error: Service Unavailable for url: http://scholarship.up.gov.in/
-[21:15:32] ❌   All attempts failed for http://scholarship.up.gov.in
-[21:15:32] 🌐 Fetching: https://scholarship.up.nic.in
-[21:15:32] ⚠️   Attempt 1: HTTPSConnectionPool(host='scholarship.up.nic.in', port=443): Max retries exceede
-[21:15:35] ⚠️   Attempt 2: HTTPSConnectionPool(host='scholarship.up.nic.in', port=443): Max retries exceede
-[21:15:38] ⚠️   Attempt 3: HTTPSConnectionPool(host='scholarship.up.nic.in', port=443): Max retries exceede
-[21:15:41] ❌   All attempts failed for https://scholarship.up.nic.in
-[21:15:50] ⚠️   Selenium not available: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+[10:12:13] 🌐 Fetching: http://odopup.in
+[10:12:15] ✅   ✓ Got 647 bytes
+[10:12:15] ✅   Saved → 05_odop.json
+[10:12:15] ℹ️ ━━━ Scraper 6: Ayushman Bharat UP ━━━
+[10:12:15] 🌐 Fetching: https://ayushmanup.in
+[10:12:18] ✅   ✓ Got 243981 bytes
+[10:12:18] ℹ️      • total_beneficiaries: 95,682,304
+[10:12:18] ℹ️      • golden_cards_issued: 57,600,000
+[10:12:18] ℹ️      • empanelled_hospitals: 6,391
+[10:12:18] ℹ️      • preauth_requests: 9,614,580
+[10:12:18] ℹ️      • claims_submitted: 9,241,289
+[10:12:18] ✅   Saved → 06_ayushman.json
+[10:12:18] ℹ️ ━━━ Scraper 7: UP Government Portal ━━━
+[10:12:18] 🌐 Fetching: https://up.gov.in/en/page/important-government-schemes
+[10:12:21] ✅   ✓ Got 84 bytes
+[10:12:21] ℹ️   Also checking UP FCS portal...
+[10:12:21] 🌐 Fetching: https://fcs.up.gov.in
+[10:12:23] ✅   ✓ Got 94602 bytes
+[10:12:23] ✅   Saved → 07_up_gov.json
+[10:12:23] ℹ️ ━━━ Scraper 8: UP Scholarship Portal ━━━
+[10:12:23] 🌐 Fetching: https://scholarship.up.gov.in
+[10:12:24] ⚠️   Attempt 1: HTTPSConnectionPool(host='scholarship.up.gov.in', port=443): Max retries exceede
+[10:12:27] ⚠️   Attempt 2: HTTPSConnectionPool(host='scholarship.up.gov.in', port=443): Max retries exceede
+[10:12:30] ⚠️   Attempt 3: HTTPSConnectionPool(host='scholarship.up.gov.in', port=443): Max retries exceede
+[10:12:33] ❌   All attempts failed for https://scholarship.up.gov.in
+[10:12:33] 🌐 Fetching: http://scholarship.up.gov.in
+[10:12:33] ⚠️   Attempt 1: HTTP 503 - 503 Server Error: Service Unavailable for url: http://scholarship.up.gov.in/
+[10:12:35] ⚠️   Attempt 2: HTTP 503 - 503 Server Error: Service Unavailable for url: http://scholarship.up.gov.in/
+[10:12:38] ⚠️   Attempt 3: HTTP 503 - 503 Server Error: Service Unavailable for url: http://scholarship.up.gov.in/
+[10:12:40] ❌   All attempts failed for http://scholarship.up.gov.in
+[10:12:40] 🌐 Fetching: https://scholarship.up.nic.in
+[10:12:40] ⚠️   Attempt 1: HTTPSConnectionPool(host='scholarship.up.nic.in', port=443): Max retries exceede
+[10:12:43] ⚠️   Attempt 2: HTTPSConnectionPool(host='scholarship.up.nic.in', port=443): Max retries exceede
+[10:12:46] ⚠️   Attempt 3: HTTPSConnectionPool(host='scholarship.up.nic.in', port=443): Max retries exceede
+[10:12:49] ❌   All attempts failed for https://scholarship.up.nic.in
+[10:12:55] ⚠️   Selenium not available: Message: session not created: This version of ChromeDriver only supports Chrome version 114
 Current browser version is 148.0.7778.97 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
 Stacktrace:
 Backtrace:
-	GetHandleVerifier [0x0062A813+48355]
-	(No symbol) [0x005BC4B1]
-	(No symbol) [0x004C5358]
-	(No symbol) [0x004E61AC]
-	(No symbol) [0x004E1EF3]
-	(No symbol) [0x004E0579]
-	(No symbol) [0x00510C55]
-	(No symbol) [0x0051093C]
-	(No symbol) [0x0050A536]
-	(No symbol) [0x004E82DC]
-	(No symbol) [0x004E93DD]
-	GetHandleVerifier [0x0088AABD+2539405]
-	GetHandleVerifier [0x008CA78F+2800735]
-	GetHandleVerifier [0x008C456C+2775612]
-	GetHandleVerifier [0x006B51E0+616112]
-	(No symbol) [0x005C5F8C]
-	(No symbol) [0x005C2328]
-	(No symbol) [0x005C240B]
-	(No symbol) [0x005B4FF7]
-	BaseThreadInitThunk [0x75095D49+25]
-	RtlInitializeExceptionChain [0x7702D83B+107]
-	RtlGetAppContainerNamedObjectPath [0x7702D7C1+561]
+	GetHandleVerifier [0x00DAA813+48355]
+	(No symbol) [0x00D3C4B1]
+	(No symbol) [0x00C45358]
+	(No symbol) [0x00C661AC]
+	(No symbol) [0x00C61EF3]
+	(No symbol) [0x00C60579]
+	(No symbol) [0x00C90C55]
+	(No symbol) [0x00C9093C]
+	(No symbol) [0x00C8A536]
+	(No symbol) [0x00C682DC]
+	(No symbol) [0x00C693DD]
+	GetHandleVerifier [0x0100AABD+2539405]
+	GetHandleVerifier [0x0104A78F+2800735]
+	GetHandleVerifier [0x0104456C+2775612]
+	GetHandleVerifier [0x00E351E0+616112]
+	(No symbol) [0x00D45F8C]
+	(No symbol) [0x00D42328]
+	(No symbol) [0x00D4240B]
+	(No symbol) [0x00D34FF7]
+	BaseThreadInitThunk [0x76265D49+25]
+	RtlInitializeExceptionChain [0x7766D83B+107]
+	RtlGetAppContainerNamedObjectPath [0x7766D7C1+561]
 
-[21:15:50] ✅   Saved → 08_scholarship.json
-[21:15:50] ✅   Saved → 00_master_scrape_results.json
+[10:12:55] ✅   Saved → 08_scholarship.json
+[10:12:55] ✅   Saved → 00_master_scrape_results.json

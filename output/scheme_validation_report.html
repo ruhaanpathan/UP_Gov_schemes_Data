@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<title>UP Schemes — Deep Policy Validation</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0a12;color:#c9d1d9;padding:1.5rem;max-width:1200px;margin:auto}
+h1{color:#f0f6fc;font-size:1.6rem} h2{color:#f0f6fc;margin:1.2rem 0 0.5rem;font-size:1.2rem}
+.meta{color:#8b949e;font-size:0.85rem;margin-bottom:1rem}
+.cards{display:flex;gap:1rem;flex-wrap:wrap;margin:0.5rem 0 1rem}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem;min-width:150px;flex:1}
+.card .n{font-size:1.8rem;font-weight:bold} .card .l{color:#8b949e;font-size:0.8rem}
+table{width:100%;border-collapse:collapse;font-size:0.85rem;margin-bottom:1.5rem}
+th{background:#161b22;color:#f0f6fc;text-align:left;padding:0.5rem;position:sticky;top:0}
+td{padding:0.5rem;border-bottom:1px solid #1a1a2e}
+tr:hover{background:#161b2288}
+</style></head><body>
+<h1>📊 UP Government Schemes — Deep Policy Validation Report</h1>
+<div class="meta">Generated: 2026-05-16 10:12 IST | 24 schemes analyzed | Pipeline v3.2</div>
+
+<div class="cards">
+<div class="card"><div class="n" style="color:#69F0AE">6.5/10</div><div class="l">Avg Validation Score</div></div>
+<div class="card"><div class="n" style="color:#00E676">9</div><div class="l">Highly Credible</div></div>
+<div class="card"><div class="n" style="color:#FFD740">14</div><div class="l">Moderate</div></div>
+<div class="card"><div class="n" style="color:#FF5252">1</div><div class="l">Questionable</div></div>
+<div class="card"><div class="n">🏆</div><div class="l">Top: MKSY (8.1)</div></div>
+</div>
+
+<h2>📋 Summary Table (Ranked by Validation Score)</h2>
+<div style="overflow-x:auto"><table>
+<tr><th>Code</th><th>Scheme</th><th>Sector</th><th>Score</th><th>Verdict</th><th>Src</th><th>Impact</th><th>Auth</th><th>Trust</th></tr>
+<tr>
+<td><b>MKSY</b></td><td>Mukhyamantri Kanya Sumangala Yojana</td><td>Women & Girl Child</td>
+<td style="color:#00E676;font-weight:bold">8.1/10</td>
+<td style="color:#00E676">Highly Credible & Impactful</td>
+<td>📄</td>
+<td>7.5</td>
+<td>9.5</td>
+<td>8.0</td>
+</tr><tr>
+<td><b>OAP</b></td><td>Old Age Pension Scheme (SSPY)</td><td>Social Security</td>
+<td style="color:#00E676;font-weight:bold">8.1/10</td>
+<td style="color:#00E676">Highly Credible & Impactful</td>
+<td>🌐</td>
+<td>5.7</td>
+<td>9.5</td>
+<td>10</td>
+</tr><tr>
+<td><b>PMAYG</b></td><td>PMAY-Gramin (Rural Housing, UP)</td><td>Housing</td>
+<td style="color:#00E676;font-weight:bold">7.8/10</td>
+<td style="color:#00E676">Highly Credible & Impactful</td>
+<td>📄</td>
+<td>9.9</td>
+<td>8.5</td>
+<td>8.0</td>
+</tr><tr>
+<td><b>WPS</b></td><td>Widow Pension Scheme (Nirashrit Mahila)</td><td>Social Security</td>
+<td style="color:#69F0AE;font-weight:bold">7.4/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>🌐</td>
+<td>4.8</td>
+<td>8.5</td>
+<td>10</td>
+</tr><tr>
+<td><b>FSBU</b></td><td>Free School Bag & Uniform Scheme</td><td>Education</td>
+<td style="color:#69F0AE;font-weight:bold">7.4/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>📚</td>
+<td>9.0</td>
+<td>5.5</td>
+<td>6</td>
+</tr><tr>
+<td><b>DPS</b></td><td>Divyang Pension Scheme</td><td>Social Security</td>
+<td style="color:#69F0AE;font-weight:bold">7.3/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>🌐</td>
+<td>4.3</td>
+<td>8.5</td>
+<td>10</td>
+</tr><tr>
+<td><b>AB</b></td><td>Ayushman Bharat PMJAY (UP Implementation)</td><td>Health</td>
+<td style="color:#69F0AE;font-weight:bold">7.3/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>🌐</td>
+<td>5.6</td>
+<td>6.5</td>
+<td>10</td>
+</tr><tr>
+<td><b>MSVY</b></td><td>Mukhyamantri Samuhik Vivah Yojana</td><td>Women & Girl Child</td>
+<td style="color:#69F0AE;font-weight:bold">7.2/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>📚</td>
+<td>6.8</td>
+<td>8.5</td>
+<td>7.5</td>
+</tr><tr>
+<td><b>SCHOL</b></td><td>Pre-Matric & Post-Matric Scholarship</td><td>Education</td>
+<td style="color:#69F0AE;font-weight:bold">7.0/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>📚</td>
+<td>5.2</td>
+<td>7.0</td>
+<td>7.5</td>
+</tr><tr>
+<td><b>ODOP</b></td><td>One District One Product (ODOP)</td><td>Employment & Industry</td>
+<td style="color:#69F0AE;font-weight:bold">6.9/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>📄</td>
+<td>8.0</td>
+<td>5.5</td>
+<td>6.5</td>
+</tr><tr>
+<td><b>PMAYU</b></td><td>PMAY-Urban (Urban Housing, UP)</td><td>Housing</td>
+<td style="color:#69F0AE;font-weight:bold">6.7/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>📄</td>
+<td>6.6</td>
+<td>8.5</td>
+<td>8.0</td>
+</tr><tr>
+<td><b>BCS</b></td><td>BC Sakhi (Banking Correspondent)</td><td>Women & Girl Child</td>
+<td style="color:#69F0AE;font-weight:bold">6.7/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>📚</td>
+<td>5.4</td>
+<td>9.0</td>
+<td>6.5</td>
+</tr><tr>
+<td><b>MKDKY</b></td><td>Mukhyamantri Krishak Durghatna Kalyan Yojana</td><td>Agriculture</td>
+<td style="color:#69F0AE;font-weight:bold">6.6/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>📚</td>
+<td>4.1</td>
+<td>8.5</td>
+<td>7.5</td>
+</tr><tr>
+<td><b>CMAPS</b></td><td>CM Apprenticeship Promotion Scheme (CMAPS)</td><td>Employment & Industry</td>
+<td style="color:#69F0AE;font-weight:bold">6.5/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>📚</td>
+<td>3.7</td>
+<td>8.5</td>
+<td>7.5</td>
+</tr><tr>
+<td><b>ARS</b></td><td>Atal Residential Schools (Atal Awasiya Vidyalaya)</td><td>Education</td>
+<td style="color:#69F0AE;font-weight:bold">6.5/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>📚</td>
+<td>6.8</td>
+<td>8.5</td>
+<td>7</td>
+</tr><tr>
+<td><b>MJAY</b></td><td>Mukhyamantri Jan Arogya Yojana</td><td>Health</td>
+<td style="color:#69F0AE;font-weight:bold">6.1/10</td>
+<td style="color:#69F0AE">Credible & Effective</td>
+<td>📚</td>
+<td>3.8</td>
+<td>6.5</td>
+<td>7</td>
+</tr><tr>
+<td><b>RPLY</b></td><td>Rashtriya Parivarik Laabh Yojana</td><td>Social Security</td>
+<td style="color:#FFD740;font-weight:bold">5.9/10</td>
+<td style="color:#FFD740">Moderately Reliable</td>
+<td>📚</td>
+<td>3.2</td>
+<td>6.5</td>
+<td>6.5</td>
+</tr><tr>
+<td><b>KAK</b></td><td>Kisan Asaan Kist Yojana</td><td>Agriculture</td>
+<td style="color:#FFD740;font-weight:bold">5.9/10</td>
+<td style="color:#FFD740">Moderately Reliable</td>
+<td>📚</td>
+<td>3.6</td>
+<td>5</td>
+<td>6</td>
+</tr><tr>
+<td><b>MS</b></td><td>Mission Shakti</td><td>Women & Girl Child</td>
+<td style="color:#FFD740;font-weight:bold">5.3/10</td>
+<td style="color:#FFD740">Moderately Reliable</td>
+<td>📚</td>
+<td>3.8</td>
+<td>5</td>
+<td>5</td>
+</tr><tr>
+<td><b>KS</b></td><td>Kaushal Satrang / YUVA Hub</td><td>Employment & Industry</td>
+<td style="color:#FFD740;font-weight:bold">5.3/10</td>
+<td style="color:#FFD740">Moderately Reliable</td>
+<td>📚</td>
+<td>2.7</td>
+<td>5</td>
+<td>6</td>
+</tr><tr>
+<td><b>KUY</b></td><td>Kisan Uday Yojana (Solar Pumps)</td><td>Agriculture</td>
+<td style="color:#FFD740;font-weight:bold">5.2/10</td>
+<td style="color:#FFD740">Moderately Reliable</td>
+<td>📚</td>
+<td>2.5</td>
+<td>6</td>
+<td>6</td>
+</tr><tr>
+<td><b>SEV</b></td><td>Sevayojan Portal (Employment Exchange)</td><td>Employment & Industry</td>
+<td style="color:#FFD740;font-weight:bold">5.1/10</td>
+<td style="color:#FFD740">Moderately Reliable</td>
+<td>📚</td>
+<td>2.5</td>
+<td>3</td>
+<td>4.5</td>
+</tr><tr>
+<td><b>MSY</b></td><td>Mahila Samarthya Yojana</td><td>Women & Girl Child</td>
+<td style="color:#FFD740;font-weight:bold">4.8/10</td>
+<td style="color:#FFD740">Moderately Reliable</td>
+<td>📚</td>
+<td>3.3</td>
+<td>5</td>
+<td>5</td>
+</tr><tr>
+<td><b>KRM</b></td><td>UP Kisan Rin Mochan Yojana (Loan Waiver)</td><td>Agriculture</td>
+<td style="color:#FFAB40;font-weight:bold">4.3/10</td>
+<td style="color:#FFAB40">Questionable</td>
+<td>📚</td>
+<td>3.4</td>
+<td>2</td>
+<td>3.5</td>
+</tr>
+</table></div>
+
+<h2>🔍 Detailed Scheme-by-Scheme Validation</h2>
+<div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Mukhyamantri Kanya Sumangala Yojana (MKSY)</h3>
+<span style="color:#8b949e">Women & Girl Child • Girl children from economically weaker families</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#00E676">8.1/10</div>
+<div style="color:#00E676;font-size:0.85rem">Highly Credible & Impactful</div>
+<div style="font-size:0.8rem;margin-top:2px">🟡 Partial</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 26.81L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹1,200 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:75.0px"></div></div> <b style="color:#00E676">7.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 54% of target (26.81L/50L). Reduced child marriage, improved girl enrollment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:95.0px"></div></div> <b style="color:#00E676">9.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk; Verified: CAG audited</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2020: 9.5L → 2024: 26.81L; Healthy avg growth: 30%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Very efficient: ₹4,476/person; Utilization data unavailable; Benefit: ₹25,000 (6 installments birth to graduation)</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; DBT reduces misuse potential; Positive independent assessment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80.0px"></div></div> <b style="color:#00E676">8.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Partial scrape (page fetched, no metrics); Aadhaar-authenticated; DBT-tracked; 5 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Old Age Pension Scheme (SSPY) (OAP)</h3>
+<span style="color:#8b949e">Social Security • Citizens aged 60+ years</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#00E676">8.1/10</div>
+<div style="color:#00E676;font-size:0.85rem">Highly Credible & Impactful</div>
+<div style="font-size:0.8rem;margin-top:2px">🟢 Live Scraped</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 67.5L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹6,700 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:57.0px"></div></div> <b style="color:#FFD740">5.7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 79% of target (67.5L/85L). Basic survival support for elderly, but ₹1000/month insufficient</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:95.0px"></div></div> <b style="color:#00E676">9.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk; Verified: SSPY live verification + 1.77L fakes removed</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2017: 42L → 2024: 67.5L; Healthy avg growth: 7%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹9,926/person; Utilization: 61%; Benefit: ₹1,000/month</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Mass reach (67.5L) — genuine welfare scale; Consistent growth — not election-driven; DBT reduces misuse potential</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:100px"></div></div> <b style="color:#00E676">10</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Live scraped from govt portal ✓; Aadhaar-authenticated; DBT-tracked; 8 years of data; Source: SSPY Portal (live scraped)</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">PMAY-Gramin (Rural Housing, UP) (PMAYG)</h3>
+<span style="color:#8b949e">Housing • Rural poor without pucca houses</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#00E676">7.8/10</div>
+<div style="color:#00E676;font-size:0.85rem">Highly Credible & Impactful</div>
+<div style="font-size:0.8rem;margin-top:2px">🟡 Partial</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 36.38L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹45,000 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:99.0px"></div></div> <b style="color:#00E676">9.9</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 99% of target (36.38L/36.85L). 36.38L pucca houses built — 98.7% completion rate, transformative</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:85.0px"></div></div> <b style="color:#00E676">8.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2017: 5L → 2024: 36.38L; Suspicious spike: 140% in one year; Healthy avg growth: 39%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:40px"></div></div> <b style="color:#FFAB40">4</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Expensive: ₹123,694/person; Utilization data unavailable; Benefit: ₹1.20-1.30 lakh for pucca house construction</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; DBT reduces misuse potential; Positive independent assessment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80.0px"></div></div> <b style="color:#00E676">8.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Partial scrape (page fetched, no metrics); Aadhaar-authenticated; DBT-tracked; 8 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Widow Pension Scheme (Nirashrit Mahila) (WPS)</h3>
+<span style="color:#8b949e">Social Security • Destitute widows</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">7.4/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">🟢 Live Scraped</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 26.13L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹3,500 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:48.0px"></div></div> <b style="color:#FFD740">4.8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 58% of target (26.13L/45L). Financial lifeline for destitute widows</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:85.0px"></div></div> <b style="color:#00E676">8.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2017: 18L → 2024: 26.13L; Healthy avg growth: 6%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹13,395/person; Low utilization: 22%; Benefit: ₹1,000/month</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT reduces misuse potential</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:100px"></div></div> <b style="color:#00E676">10</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Live scraped from govt portal ✓; Aadhaar-authenticated; DBT-tracked; 8 years of data; Source: SSPY Portal (live scraped)</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Free School Bag & Uniform Scheme (FSBU)</h3>
+<span style="color:#8b949e">Education • Government school students (Class 1-8)</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">7.4/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 160.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹2,000 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 89% of target (160.0L/180L). Reduced dropout rates, lessened financial burden on poor families</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:55.0px"></div></div> <b style="color:#FFD740">5.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Low duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2018: 100L → 2024: 160L; Healthy avg growth: 8%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Very efficient: ₹1,250/person; Utilization data unavailable; Benefit: Free bags, uniforms, shoes for govt school students</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Mass reach (160.0L) — genuine welfare scale; Consistent growth — not election-driven; Positive independent assessment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; 7 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Divyang Pension Scheme (DPS)</h3>
+<span style="color:#8b949e">Social Security • Persons with disabilities (40%+)</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">7.3/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">🟢 Live Scraped</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 11.05L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹1,440 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:43.0px"></div></div> <b style="color:#FFAB40">4.3</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 46% of target (11.05L/24L). Disability support but low awareness limits reach</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:85.0px"></div></div> <b style="color:#00E676">8.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2017: 7L → 2024: 11.05L; Healthy avg growth: 7%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹13,032/person; Low utilization: 23%; Benefit: ₹1,000/month</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT reduces misuse potential</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:100px"></div></div> <b style="color:#00E676">10</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Live scraped from govt portal ✓; Aadhaar-authenticated; DBT-tracked; 8 years of data; Source: SSPY Portal (live scraped)</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Ayushman Bharat PMJAY (UP Implementation) (AB)</h3>
+<span style="color:#8b949e">Health • Poor and vulnerable families</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">7.3/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">🟢 Live Scraped</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 45.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹7,040 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:56.0px"></div></div> <b style="color:#FFD740">5.6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 5% of target (45.0L/956L). Life-saving for poor families, but hospital refusals and fraud exist</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:65.0px"></div></div> <b style="color:#69F0AE">6.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Aadhaar-verified ✓</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2019: 8L → 2024: 45L</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹15,644/person; Utilization data unavailable; Benefit: ₹5 lakh health insurance/family/year</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; Positive independent assessment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:100px"></div></div> <b style="color:#00E676">10</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Live scraped from govt portal ✓; Aadhaar-authenticated; 6 years of data; Source: Ayushman Portal (live scraped)</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Mukhyamantri Samuhik Vivah Yojana (MSVY)</h3>
+<span style="color:#8b949e">Women & Girl Child • Economically weaker section brides</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">7.2/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 3.5L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹600 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:68.0px"></div></div> <b style="color:#69F0AE">6.8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 35% of target (3.5L/10L). Reduced dowry burden on poor families</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:85.0px"></div></div> <b style="color:#00E676">8.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2018: 0.5L → 2024: 3.5L; Suspicious spike: 140% in one year</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹17,143/person; Utilization data unavailable; Benefit: ₹51,000 per couple (increased over years)</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; DBT reduces misuse potential; Positive independent assessment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:75.0px"></div></div> <b style="color:#00E676">7.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; Aadhaar-authenticated; DBT-tracked; 7 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Pre-Matric & Post-Matric Scholarship (SCHOL)</h3>
+<span style="color:#8b949e">Education • SC, OBC, Minority students</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">7.0/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 80.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹8,000 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:52.0px"></div></div> <b style="color:#FFD740">5.2</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 67% of target (80.0L/120L). Critical education support but disbursement delays hurt students</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70.0px"></div></div> <b style="color:#69F0AE">7.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; ⚠️ fake applications detected</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2017: 50L → 2024: 80L; Healthy avg growth: 7%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹10,000/person; Utilization data unavailable; Benefit: ₹3,000-₹15,000/year depending on level</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Mass reach (80.0L) — genuine welfare scale; Consistent growth — not election-driven; DBT reduces misuse potential</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:75.0px"></div></div> <b style="color:#00E676">7.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; Aadhaar-authenticated; DBT-tracked; 8 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">One District One Product (ODOP) (ODOP)</h3>
+<span style="color:#8b949e">Employment & Industry • Local artisans, MSME, craftspeople across 75 districts</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">6.9/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">🟡 Partial</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 25.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹6,000 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80.0px"></div></div> <b style="color:#00E676">8.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 50% of target (25.0L/50L). ₹93,000 Cr exports, international recognition, artisan livelihoods transformed</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:55.0px"></div></div> <b style="color:#FFD740">5.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Low duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2019: 5L → 2024: 25L; Healthy avg growth: 39%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Moderate: ₹24,000/person; Utilization data unavailable; Benefit: Toolkits, training, market access, loans</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; Positive independent assessment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:65.0px"></div></div> <b style="color:#69F0AE">6.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Partial scrape (page fetched, no metrics); 6 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">PMAY-Urban (Urban Housing, UP) (PMAYU)</h3>
+<span style="color:#8b949e">Housing • Urban poor and EWS/LIG families</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">6.7/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">🟡 Partial</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 17.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹25,000 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:66.0px"></div></div> <b style="color:#69F0AE">6.6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 81% of target (17.0L/21L). 17L urban houses delivered, significant Housing For All contribution</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:85.0px"></div></div> <b style="color:#00E676">8.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2017: 2L → 2024: 17L; Suspicious spike: 150% in one year</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60.0px"></div></div> <b style="color:#69F0AE">6.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Urban centres only — rural areas excluded</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:40px"></div></div> <b style="color:#FFAB40">4</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Expensive: ₹147,059/person; Utilization data unavailable; Benefit: ₹1.5-2.67 lakh subsidy for urban housing</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; DBT reduces misuse potential; Positive independent assessment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80.0px"></div></div> <b style="color:#00E676">8.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Partial scrape (page fetched, no metrics); Aadhaar-authenticated; DBT-tracked; 8 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">BC Sakhi (Banking Correspondent) (BCS)</h3>
+<span style="color:#8b949e">Women & Girl Child • Rural women for doorstep banking services</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">6.7/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 0.5L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹200 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:54.0px"></div></div> <b style="color:#FFD740">5.4</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 50% of target (0.5L/1L). 50K women empowered as banking agents, financial inclusion improved</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; No duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2021: 0.1L → 2024: 0.5L</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Moderate: ₹40,000/person; Utilization data unavailable; Benefit: ₹4,000/month + commission on transactions</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; ⚠️ 100% spike in election year 2022; DBT reduces misuse potential; Positive independent assessment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:65.0px"></div></div> <b style="color:#69F0AE">6.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; Aadhaar-authenticated; DBT-tracked</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Mukhyamantri Krishak Durghatna Kalyan Yojana (MKDKY)</h3>
+<span style="color:#8b949e">Agriculture • Farmers injured/killed during agricultural activities</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">6.6/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 2.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹600 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:41.0px"></div></div> <b style="color:#FFAB40">4.1</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 40% of target (2.0L/5L). Meaningful accident compensation but slow claims process</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:85.0px"></div></div> <b style="color:#00E676">8.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2020: 0.5L → 2024: 2.0L</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Moderate: ₹30,000/person; Utilization data unavailable; Benefit: ₹5-9 lakh (accident/death compensation)</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; DBT reduces misuse potential</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:75.0px"></div></div> <b style="color:#00E676">7.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; Aadhaar-authenticated; DBT-tracked; 5 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">CM Apprenticeship Promotion Scheme (CMAPS) (CMAPS)</h3>
+<span style="color:#8b949e">Employment & Industry • Youth seeking industry training</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">6.5/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 3.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹300 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:37.0px"></div></div> <b style="color:#FFAB40">3.7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 30% of target (3.0L/10L). Training provided but low conversion to permanent employment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:85.0px"></div></div> <b style="color:#00E676">8.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2020: 0.5L → 2024: 3.0L</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:67.0px"></div></div> <b style="color:#69F0AE">6.7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">~50/75 districts — 66% coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹10,000/person; Utilization data unavailable; Benefit: Apprenticeship + stipend supplement</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; DBT reduces misuse potential</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:75.0px"></div></div> <b style="color:#00E676">7.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; Aadhaar-authenticated; DBT-tracked; 5 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Atal Residential Schools (Atal Awasiya Vidyalaya) (ARS)</h3>
+<span style="color:#8b949e">Education • Children of construction workers & COVID orphans</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">6.5/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 0.1L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹500 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:68.0px"></div></div> <b style="color:#69F0AE">6.8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 20% of target (0.1L/0.5L). 93% CBSE pass rate, transforming lives of construction workers' children</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:85.0px"></div></div> <b style="color:#00E676">8.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Aadhaar-verified ✓; No duplicate risk; Verified: CBSE verified results</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2022: 0.02L → 2025: 0.1L; Suspicious spike: 150% in one year</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70.0px"></div></div> <b style="color:#69F0AE">7.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 18 divisions covered (not district-level)</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:40px"></div></div> <b style="color:#FFAB40">4</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Expensive: ₹500,000/person; Utilization data unavailable; Benefit: Free CBSE residential education + all expenses</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; Positive independent assessment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; Aadhaar-authenticated; Source: CBSE results + school records</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Mukhyamantri Jan Arogya Yojana (MJAY)</h3>
+<span style="color:#8b949e">Health • Families not covered under PMJAY</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#69F0AE">6.1/10</div>
+<div style="color:#69F0AE;font-size:0.85rem">Credible & Effective</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 10.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹1,200 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:38.0px"></div></div> <b style="color:#FFAB40">3.8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 33% of target (10.0L/30L). Fills PMJAY gap but awareness is very low</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:65.0px"></div></div> <b style="color:#69F0AE">6.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Aadhaar-verified ✓</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2020: 2L → 2024: 10L</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80.0px"></div></div> <b style="color:#00E676">8.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">~60/75 districts — 80% coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹12,000/person; Utilization data unavailable; Benefit: Supplementary health coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; Aadhaar-authenticated; 5 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Rashtriya Parivarik Laabh Yojana (RPLY)</h3>
+<span style="color:#8b949e">Social Security • BPL families who lost primary breadwinner</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#FFD740">5.9/10</div>
+<div style="color:#FFD740;font-size:0.85rem">Moderately Reliable</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 5.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹1,500 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:32.0px"></div></div> <b style="color:#FFAB40">3.2</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 33% of target (5.0L/15L). ₹30K one-time aid inadequate for family that lost breadwinner</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:65.0px"></div></div> <b style="color:#69F0AE">6.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">DBT-linked ✓</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2018: 1L → 2024: 5L; Healthy avg growth: 34%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80.0px"></div></div> <b style="color:#00E676">8.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">~60/75 districts — 80% coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Moderate: ₹30,000/person; Utilization data unavailable; Benefit: ₹30,000 per family (on breadwinner death)</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; DBT reduces misuse potential; Negative media coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:65.0px"></div></div> <b style="color:#69F0AE">6.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; DBT-tracked; 7 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Kisan Asaan Kist Yojana (KAK)</h3>
+<span style="color:#8b949e">Agriculture • Farmers with pending electricity dues</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#FFD740">5.9/10</div>
+<div style="color:#FFD740;font-size:0.85rem">Moderately Reliable</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 8.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹400 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:36.0px"></div></div> <b style="color:#FFAB40">3.6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 27% of target (8.0L/30L). Band-aid — lets farmers pay in installments but doesn't reduce cost</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px"></div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2019: 2L → 2024: 8L; Healthy avg growth: 36%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹5,000/person; Utilization data unavailable; Benefit: Easy installment for electricity bills</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; 6 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Mission Shakti (MS)</h3>
+<span style="color:#8b949e">Women & Girl Child • All women and girls of UP</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#FFD740">5.3/10</div>
+<div style="color:#FFD740;font-size:0.85rem">Moderately Reliable</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 50.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹3,146 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:38.0px"></div></div> <b style="color:#FFAB40">3.8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 10% of target (50.0L/500L). BC Sakhis providing doorstep banking, women safety awareness</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px"></div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2021: 10L → 2024: 50L; Suspicious spike: 150% in one year</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹6,292/person; Utilization data unavailable; Benefit: Multi-program umbrella scheme</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; ⚠️ 150% spike in election year 2022; Positive independent assessment</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Kaushal Satrang / YUVA Hub (KS)</h3>
+<span style="color:#8b949e">Employment & Industry • Unemployed youth</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#FFD740">5.3/10</div>
+<div style="color:#FFD740;font-size:0.85rem">Moderately Reliable</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 5.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹500 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FF5252;height:10px;border-radius:4px;width:27.0px"></div></div> <b style="color:#FF5252">2.7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 20% of target (5.0L/25L). Training quality inconsistent, job outcomes not tracked</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px"></div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2019: 1L → 2024: 5L; Healthy avg growth: 39%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60.0px"></div></div> <b style="color:#69F0AE">6.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">~45/75 districts — 60% coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹10,000/person; Utilization data unavailable; Benefit: Skill training across 7 programs</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; Negative media coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; 6 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Kisan Uday Yojana (Solar Pumps) (KUY)</h3>
+<span style="color:#8b949e">Agriculture • Farmers with old diesel/electric irrigation pumps</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#FFD740">5.2/10</div>
+<div style="color:#FFD740;font-size:0.85rem">Moderately Reliable</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 1.5L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹800 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FF5252;height:10px;border-radius:4px;width:25.0px"></div></div> <b style="color:#FF5252">2.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 15% of target (1.5L/10L). Minimal — only 15% of 10L pump target achieved</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Verified: CAG flagged delays</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2019: 0.3L → 2024: 1.5L; Healthy avg growth: 39%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:53.0px"></div></div> <b style="color:#FFD740">5.3</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">~40/75 districts — 53% coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Moderate: ₹53,333/person; Utilization data unavailable; Benefit: Free energy-efficient pump replacement</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; Negative media coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; 6 years of data</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Sevayojan Portal (Employment Exchange) (SEV)</h3>
+<span style="color:#8b949e">Employment & Industry • Unemployed youth seeking jobs</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#FFD740">5.1/10</div>
+<div style="color:#FFD740;font-size:0.85rem">Moderately Reliable</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 15.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹150 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FF5252;height:10px;border-radius:4px;width:25.0px"></div></div> <b style="color:#FF5252">2.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 15% of target (15.0L/100L). Registrations ≠ placements — actual job creation questionable</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:30px"></div></div> <b style="color:#FFAB40">3</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">⚠️ HIGH duplicate risk</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:80px"></div></div> <b style="color:#00E676">8</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2019: 3L → 2024: 15L; Healthy avg growth: 39%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:70px"></div></div> <b style="color:#69F0AE">7</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Very efficient: ₹1,000/person; Utilization data unavailable; Benefit: Job matching, employment fair access</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven; Negative media coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:45.0px"></div></div> <b style="color:#FFD740">4.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; 6 years of data; ⚠️ High duplicate risk lowers trust</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">Mahila Samarthya Yojana (MSY)</h3>
+<span style="color:#8b949e">Women & Girl Child • Women seeking skill development & self-employment</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#FFD740">4.8/10</div>
+<div style="color:#FFD740;font-size:0.85rem">Moderately Reliable</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 2.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹200 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:33.0px"></div></div> <b style="color:#FFAB40">3.3</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 20% of target (2.0L/10L). Early stage — limited data on outcomes</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px"></div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:40px"></div></div> <b style="color:#FFAB40">4</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">2022: 0.5L → 2024: 2.0L; Suspicious spike: 140% in one year; Unusually rapid growth: 103%/yr</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:53.0px"></div></div> <b style="color:#FFD740">5.3</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">~40/75 districts — 53% coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Efficient: ₹10,000/person; Utilization data unavailable; Benefit: Skill training & entrepreneurship support</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#69F0AE;height:10px;border-radius:4px;width:60px"></div></div> <b style="color:#69F0AE">6</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Consistent growth — not election-driven</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification</div>
+</div>
+</div><div style="background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1rem">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+<div><h3 style="margin:0;color:#f0f6fc">UP Kisan Rin Mochan Yojana (Loan Waiver) (KRM)</h3>
+<span style="color:#8b949e">Agriculture • Small & marginal farmers with crop loans</span></div>
+<div style="text-align:right"><div style="font-size:2rem;font-weight:bold;color:#FFAB40">4.3/10</div>
+<div style="color:#FFAB40;font-size:0.85rem">Questionable</div>
+<div style="font-size:0.8rem;margin-top:2px">⚪ Research</div></div>
+</div>
+<div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap">
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">👥 86.0L beneficiaries</span>
+<span style="background:#21262d;padding:2px 8px;border-radius:4px;font-size:0.8rem">💰 ₹36,000 Cr budget</span>
+</div>
+<div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🎯 <b>Policy Impact</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:34.0px"></div></div> <b style="color:#FFAB40">3.4</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Reached 37% of target (86.0L/230L). Short-term relief but no long-term farm distress fix</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>👤 <b>Beneficiary Authenticity</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FF5252;height:10px;border-radius:4px;width:20px"></div></div> <b style="color:#FF5252">2</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">⚠️ HIGH duplicate risk; ⚠️ multiple complaints</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>📈 <b>Inter-Year Consistency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50.0px"></div></div> <b style="color:#FFD740">5.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Insufficient yearly data for trend analysis</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🗺️ <b>District Distribution</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#00E676;height:10px;border-radius:4px;width:90.0px"></div></div> <b style="color:#00E676">9.0</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">All 75 districts covered</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>💰 <b>Budget Efficiency</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Moderate: ₹41,860/person; Utilization data unavailable; Benefit: Up to ₹1,00,000 loan waiver</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>⚖️ <b>Political Usefulness</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFD740;height:10px;border-radius:4px;width:50px"></div></div> <b style="color:#FFD740">5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Mass reach (86.0L) — genuine welfare scale; Negative media coverage</div>
+</div><div style="margin:0.4rem 0;padding:0.5rem;background:#161b22;border-radius:6px">
+<div>🔒 <b>Data Trust Score</b> <div style="background:#1a1a2e;border-radius:4px;height:10px;width:100px;display:inline-block;vertical-align:middle"><div style="background:#FFAB40;height:10px;border-radius:4px;width:35.0px"></div></div> <b style="color:#FFAB40">3.5</b></div>
+<div style="color:#8b949e;font-size:0.82rem;margin-top:3px">Research baseline only — no live verification; ⚠️ High duplicate risk lowers trust</div>
+</div>
+</div>
+
+<div style="margin-top:1.5rem;padding:1rem;background:#161b22;border-radius:8px;font-size:0.8rem;color:#8b949e">
+<b>Methodology:</b> Each scheme scored on 7 dimensions (0-10). Overall = weighted average:
+Policy Impact (20%) + Data Trust (20%) + Budget Efficiency (15%) + Beneficiary Authenticity (15%) +
+Inter-Year Consistency (10%) + District Distribution (10%) + Political Usefulness (10%).
+Data sources: live govt portal scrapes, research baselines, RTI data, CAG reports, and news analysis.
+</div>
+</body></html>

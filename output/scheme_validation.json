@@ -1,0 +1,989 @@
+{
+  "generated": "2026-05-16T10:12:57.665867",
+  "schemes": [
+    {
+      "name": "Mukhyamantri Kanya Sumangala Yojana",
+      "short": "MKSY",
+      "sector": "Women & Girl Child",
+      "overall_validation_score": 8.1,
+      "validation_verdict": "Highly Credible & Impactful",
+      "beneficiaries_lakh": 26.81,
+      "budget_crore": 1200,
+      "target_group": "Girl children from economically weaker families",
+      "scrape_status": "PARTIAL",
+      "dimensions": {
+        "policy_impact": {
+          "score": 7.5,
+          "reasoning": "Reached 54% of target (26.81L/50L). Reduced child marriage, improved girl enrollment"
+        },
+        "beneficiary_authenticity": {
+          "score": 9.5,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk; Verified: CAG audited"
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2020: 9.5L → 2024: 26.81L; Healthy avg growth: 30%/yr"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 7,
+          "reasoning": "Very efficient: ₹4,476/person; Utilization data unavailable; Benefit: ₹25,000 (6 installments birth to graduation)"
+        },
+        "political_usefulness": {
+          "score": 8,
+          "reasoning": "Consistent growth — not election-driven; DBT reduces misuse potential; Positive independent assessment"
+        },
+        "data_trust_score": {
+          "score": 8.0,
+          "reasoning": "Partial scrape (page fetched, no metrics); Aadhaar-authenticated; DBT-tracked; 5 years of data"
+        }
+      }
+    },
+    {
+      "name": "Old Age Pension Scheme (SSPY)",
+      "short": "OAP",
+      "sector": "Social Security",
+      "overall_validation_score": 8.1,
+      "validation_verdict": "Highly Credible & Impactful",
+      "beneficiaries_lakh": 67.5,
+      "budget_crore": 6700,
+      "target_group": "Citizens aged 60+ years",
+      "scrape_status": "LIVE",
+      "dimensions": {
+        "policy_impact": {
+          "score": 5.7,
+          "reasoning": "Reached 79% of target (67.5L/85L). Basic survival support for elderly, but ₹1000/month insufficient"
+        },
+        "beneficiary_authenticity": {
+          "score": 9.5,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk; Verified: SSPY live verification + 1.77L fakes removed"
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2017: 42L → 2024: 67.5L; Healthy avg growth: 7%/yr"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 7,
+          "reasoning": "Efficient: ₹9,926/person; Utilization: 61%; Benefit: ₹1,000/month"
+        },
+        "political_usefulness": {
+          "score": 8,
+          "reasoning": "Mass reach (67.5L) — genuine welfare scale; Consistent growth — not election-driven; DBT reduces misuse potential"
+        },
+        "data_trust_score": {
+          "score": 10,
+          "reasoning": "Live scraped from govt portal ✓; Aadhaar-authenticated; DBT-tracked; 8 years of data; Source: SSPY Portal (live scraped)"
+        }
+      }
+    },
+    {
+      "name": "PMAY-Gramin (Rural Housing, UP)",
+      "short": "PMAYG",
+      "sector": "Housing",
+      "overall_validation_score": 7.8,
+      "validation_verdict": "Highly Credible & Impactful",
+      "beneficiaries_lakh": 36.38,
+      "budget_crore": 45000,
+      "target_group": "Rural poor without pucca houses",
+      "scrape_status": "PARTIAL",
+      "dimensions": {
+        "policy_impact": {
+          "score": 9.9,
+          "reasoning": "Reached 99% of target (36.38L/36.85L). 36.38L pucca houses built — 98.7% completion rate, transformative"
+        },
+        "beneficiary_authenticity": {
+          "score": 8.5,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 6,
+          "reasoning": "2017: 5L → 2024: 36.38L; Suspicious spike: 140% in one year; Healthy avg growth: 39%/yr"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 4,
+          "reasoning": "Expensive: ₹123,694/person; Utilization data unavailable; Benefit: ₹1.20-1.30 lakh for pucca house construction"
+        },
+        "political_usefulness": {
+          "score": 8,
+          "reasoning": "Consistent growth — not election-driven; DBT reduces misuse potential; Positive independent assessment"
+        },
+        "data_trust_score": {
+          "score": 8.0,
+          "reasoning": "Partial scrape (page fetched, no metrics); Aadhaar-authenticated; DBT-tracked; 8 years of data"
+        }
+      }
+    },
+    {
+      "name": "Widow Pension Scheme (Nirashrit Mahila)",
+      "short": "WPS",
+      "sector": "Social Security",
+      "overall_validation_score": 7.4,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 26.13,
+      "budget_crore": 3500,
+      "target_group": "Destitute widows",
+      "scrape_status": "LIVE",
+      "dimensions": {
+        "policy_impact": {
+          "score": 4.8,
+          "reasoning": "Reached 58% of target (26.13L/45L). Financial lifeline for destitute widows"
+        },
+        "beneficiary_authenticity": {
+          "score": 8.5,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2017: 18L → 2024: 26.13L; Healthy avg growth: 6%/yr"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹13,395/person; Low utilization: 22%; Benefit: ₹1,000/month"
+        },
+        "political_usefulness": {
+          "score": 6,
+          "reasoning": "DBT reduces misuse potential"
+        },
+        "data_trust_score": {
+          "score": 10,
+          "reasoning": "Live scraped from govt portal ✓; Aadhaar-authenticated; DBT-tracked; 8 years of data; Source: SSPY Portal (live scraped)"
+        }
+      }
+    },
+    {
+      "name": "Free School Bag & Uniform Scheme",
+      "short": "FSBU",
+      "sector": "Education",
+      "overall_validation_score": 7.4,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 160.0,
+      "budget_crore": 2000,
+      "target_group": "Government school students (Class 1-8)",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 9.0,
+          "reasoning": "Reached 89% of target (160.0L/180L). Reduced dropout rates, lessened financial burden on poor families"
+        },
+        "beneficiary_authenticity": {
+          "score": 5.5,
+          "reasoning": "Low duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2018: 100L → 2024: 160L; Healthy avg growth: 8%/yr"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 7,
+          "reasoning": "Very efficient: ₹1,250/person; Utilization data unavailable; Benefit: Free bags, uniforms, shoes for govt school students"
+        },
+        "political_usefulness": {
+          "score": 8,
+          "reasoning": "Mass reach (160.0L) — genuine welfare scale; Consistent growth — not election-driven; Positive independent assessment"
+        },
+        "data_trust_score": {
+          "score": 6,
+          "reasoning": "Research baseline only — no live verification; 7 years of data"
+        }
+      }
+    },
+    {
+      "name": "Divyang Pension Scheme",
+      "short": "DPS",
+      "sector": "Social Security",
+      "overall_validation_score": 7.3,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 11.05,
+      "budget_crore": 1440,
+      "target_group": "Persons with disabilities (40%+)",
+      "scrape_status": "LIVE",
+      "dimensions": {
+        "policy_impact": {
+          "score": 4.3,
+          "reasoning": "Reached 46% of target (11.05L/24L). Disability support but low awareness limits reach"
+        },
+        "beneficiary_authenticity": {
+          "score": 8.5,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2017: 7L → 2024: 11.05L; Healthy avg growth: 7%/yr"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹13,032/person; Low utilization: 23%; Benefit: ₹1,000/month"
+        },
+        "political_usefulness": {
+          "score": 6,
+          "reasoning": "DBT reduces misuse potential"
+        },
+        "data_trust_score": {
+          "score": 10,
+          "reasoning": "Live scraped from govt portal ✓; Aadhaar-authenticated; DBT-tracked; 8 years of data; Source: SSPY Portal (live scraped)"
+        }
+      }
+    },
+    {
+      "name": "Ayushman Bharat PMJAY (UP Implementation)",
+      "short": "AB",
+      "sector": "Health",
+      "overall_validation_score": 7.3,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 45.0,
+      "budget_crore": 7040,
+      "target_group": "Poor and vulnerable families",
+      "scrape_status": "LIVE",
+      "dimensions": {
+        "policy_impact": {
+          "score": 5.6,
+          "reasoning": "Reached 5% of target (45.0L/956L). Life-saving for poor families, but hospital refusals and fraud exist"
+        },
+        "beneficiary_authenticity": {
+          "score": 6.5,
+          "reasoning": "Aadhaar-verified ✓"
+        },
+        "inter_year_consistency": {
+          "score": 7,
+          "reasoning": "2019: 8L → 2024: 45L"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹15,644/person; Utilization data unavailable; Benefit: ₹5 lakh health insurance/family/year"
+        },
+        "political_usefulness": {
+          "score": 7,
+          "reasoning": "Consistent growth — not election-driven; Positive independent assessment"
+        },
+        "data_trust_score": {
+          "score": 10,
+          "reasoning": "Live scraped from govt portal ✓; Aadhaar-authenticated; 6 years of data; Source: Ayushman Portal (live scraped)"
+        }
+      }
+    },
+    {
+      "name": "Mukhyamantri Samuhik Vivah Yojana",
+      "short": "MSVY",
+      "sector": "Women & Girl Child",
+      "overall_validation_score": 7.2,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 3.5,
+      "budget_crore": 600,
+      "target_group": "Economically weaker section brides",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 6.8,
+          "reasoning": "Reached 35% of target (3.5L/10L). Reduced dowry burden on poor families"
+        },
+        "beneficiary_authenticity": {
+          "score": 8.5,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 5,
+          "reasoning": "2018: 0.5L → 2024: 3.5L; Suspicious spike: 140% in one year"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹17,143/person; Utilization data unavailable; Benefit: ₹51,000 per couple (increased over years)"
+        },
+        "political_usefulness": {
+          "score": 8,
+          "reasoning": "Consistent growth — not election-driven; DBT reduces misuse potential; Positive independent assessment"
+        },
+        "data_trust_score": {
+          "score": 7.5,
+          "reasoning": "Research baseline only — no live verification; Aadhaar-authenticated; DBT-tracked; 7 years of data"
+        }
+      }
+    },
+    {
+      "name": "Pre-Matric & Post-Matric Scholarship",
+      "short": "SCHOL",
+      "sector": "Education",
+      "overall_validation_score": 7.0,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 80.0,
+      "budget_crore": 8000,
+      "target_group": "SC, OBC, Minority students",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 5.2,
+          "reasoning": "Reached 67% of target (80.0L/120L). Critical education support but disbursement delays hurt students"
+        },
+        "beneficiary_authenticity": {
+          "score": 7.0,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; ⚠️ fake applications detected"
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2017: 50L → 2024: 80L; Healthy avg growth: 7%/yr"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹10,000/person; Utilization data unavailable; Benefit: ₹3,000-₹15,000/year depending on level"
+        },
+        "political_usefulness": {
+          "score": 8,
+          "reasoning": "Mass reach (80.0L) — genuine welfare scale; Consistent growth — not election-driven; DBT reduces misuse potential"
+        },
+        "data_trust_score": {
+          "score": 7.5,
+          "reasoning": "Research baseline only — no live verification; Aadhaar-authenticated; DBT-tracked; 8 years of data"
+        }
+      }
+    },
+    {
+      "name": "One District One Product (ODOP)",
+      "short": "ODOP",
+      "sector": "Employment & Industry",
+      "overall_validation_score": 6.9,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 25.0,
+      "budget_crore": 6000,
+      "target_group": "Local artisans, MSME, craftspeople across 75 districts",
+      "scrape_status": "PARTIAL",
+      "dimensions": {
+        "policy_impact": {
+          "score": 8.0,
+          "reasoning": "Reached 50% of target (25.0L/50L). ₹93,000 Cr exports, international recognition, artisan livelihoods transformed"
+        },
+        "beneficiary_authenticity": {
+          "score": 5.5,
+          "reasoning": "Low duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2019: 5L → 2024: 25L; Healthy avg growth: 39%/yr"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 5,
+          "reasoning": "Moderate: ₹24,000/person; Utilization data unavailable; Benefit: Toolkits, training, market access, loans"
+        },
+        "political_usefulness": {
+          "score": 7,
+          "reasoning": "Consistent growth — not election-driven; Positive independent assessment"
+        },
+        "data_trust_score": {
+          "score": 6.5,
+          "reasoning": "Partial scrape (page fetched, no metrics); 6 years of data"
+        }
+      }
+    },
+    {
+      "name": "PMAY-Urban (Urban Housing, UP)",
+      "short": "PMAYU",
+      "sector": "Housing",
+      "overall_validation_score": 6.7,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 17.0,
+      "budget_crore": 25000,
+      "target_group": "Urban poor and EWS/LIG families",
+      "scrape_status": "PARTIAL",
+      "dimensions": {
+        "policy_impact": {
+          "score": 6.6,
+          "reasoning": "Reached 81% of target (17.0L/21L). 17L urban houses delivered, significant Housing For All contribution"
+        },
+        "beneficiary_authenticity": {
+          "score": 8.5,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 5,
+          "reasoning": "2017: 2L → 2024: 17L; Suspicious spike: 150% in one year"
+        },
+        "district_distribution": {
+          "score": 6.0,
+          "reasoning": "Urban centres only — rural areas excluded"
+        },
+        "budget_efficiency": {
+          "score": 4,
+          "reasoning": "Expensive: ₹147,059/person; Utilization data unavailable; Benefit: ₹1.5-2.67 lakh subsidy for urban housing"
+        },
+        "political_usefulness": {
+          "score": 8,
+          "reasoning": "Consistent growth — not election-driven; DBT reduces misuse potential; Positive independent assessment"
+        },
+        "data_trust_score": {
+          "score": 8.0,
+          "reasoning": "Partial scrape (page fetched, no metrics); Aadhaar-authenticated; DBT-tracked; 8 years of data"
+        }
+      }
+    },
+    {
+      "name": "BC Sakhi (Banking Correspondent)",
+      "short": "BCS",
+      "sector": "Women & Girl Child",
+      "overall_validation_score": 6.7,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 0.5,
+      "budget_crore": 200,
+      "target_group": "Rural women for doorstep banking services",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 5.4,
+          "reasoning": "Reached 50% of target (0.5L/1L). 50K women empowered as banking agents, financial inclusion improved"
+        },
+        "beneficiary_authenticity": {
+          "score": 9.0,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; No duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 7,
+          "reasoning": "2021: 0.1L → 2024: 0.5L"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 5,
+          "reasoning": "Moderate: ₹40,000/person; Utilization data unavailable; Benefit: ₹4,000/month + commission on transactions"
+        },
+        "political_usefulness": {
+          "score": 6,
+          "reasoning": "Consistent growth — not election-driven; ⚠️ 100% spike in election year 2022; DBT reduces misuse potential; Positive independent assessment"
+        },
+        "data_trust_score": {
+          "score": 6.5,
+          "reasoning": "Research baseline only — no live verification; Aadhaar-authenticated; DBT-tracked"
+        }
+      }
+    },
+    {
+      "name": "Mukhyamantri Krishak Durghatna Kalyan Yojana",
+      "short": "MKDKY",
+      "sector": "Agriculture",
+      "overall_validation_score": 6.6,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 2.0,
+      "budget_crore": 600,
+      "target_group": "Farmers injured/killed during agricultural activities",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 4.1,
+          "reasoning": "Reached 40% of target (2.0L/5L). Meaningful accident compensation but slow claims process"
+        },
+        "beneficiary_authenticity": {
+          "score": 8.5,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 7,
+          "reasoning": "2020: 0.5L → 2024: 2.0L"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 5,
+          "reasoning": "Moderate: ₹30,000/person; Utilization data unavailable; Benefit: ₹5-9 lakh (accident/death compensation)"
+        },
+        "political_usefulness": {
+          "score": 7,
+          "reasoning": "Consistent growth — not election-driven; DBT reduces misuse potential"
+        },
+        "data_trust_score": {
+          "score": 7.5,
+          "reasoning": "Research baseline only — no live verification; Aadhaar-authenticated; DBT-tracked; 5 years of data"
+        }
+      }
+    },
+    {
+      "name": "CM Apprenticeship Promotion Scheme (CMAPS)",
+      "short": "CMAPS",
+      "sector": "Employment & Industry",
+      "overall_validation_score": 6.5,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 3.0,
+      "budget_crore": 300,
+      "target_group": "Youth seeking industry training",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 3.7,
+          "reasoning": "Reached 30% of target (3.0L/10L). Training provided but low conversion to permanent employment"
+        },
+        "beneficiary_authenticity": {
+          "score": 8.5,
+          "reasoning": "DBT-linked ✓; Aadhaar-verified ✓; Low duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 7,
+          "reasoning": "2020: 0.5L → 2024: 3.0L"
+        },
+        "district_distribution": {
+          "score": 6.7,
+          "reasoning": "~50/75 districts — 66% coverage"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹10,000/person; Utilization data unavailable; Benefit: Apprenticeship + stipend supplement"
+        },
+        "political_usefulness": {
+          "score": 7,
+          "reasoning": "Consistent growth — not election-driven; DBT reduces misuse potential"
+        },
+        "data_trust_score": {
+          "score": 7.5,
+          "reasoning": "Research baseline only — no live verification; Aadhaar-authenticated; DBT-tracked; 5 years of data"
+        }
+      }
+    },
+    {
+      "name": "Atal Residential Schools (Atal Awasiya Vidyalaya)",
+      "short": "ARS",
+      "sector": "Education",
+      "overall_validation_score": 6.5,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 0.1,
+      "budget_crore": 500,
+      "target_group": "Children of construction workers & COVID orphans",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 6.8,
+          "reasoning": "Reached 20% of target (0.1L/0.5L). 93% CBSE pass rate, transforming lives of construction workers' children"
+        },
+        "beneficiary_authenticity": {
+          "score": 8.5,
+          "reasoning": "Aadhaar-verified ✓; No duplicate risk; Verified: CBSE verified results"
+        },
+        "inter_year_consistency": {
+          "score": 5,
+          "reasoning": "2022: 0.02L → 2025: 0.1L; Suspicious spike: 150% in one year"
+        },
+        "district_distribution": {
+          "score": 7.0,
+          "reasoning": "All 18 divisions covered (not district-level)"
+        },
+        "budget_efficiency": {
+          "score": 4,
+          "reasoning": "Expensive: ₹500,000/person; Utilization data unavailable; Benefit: Free CBSE residential education + all expenses"
+        },
+        "political_usefulness": {
+          "score": 7,
+          "reasoning": "Consistent growth — not election-driven; Positive independent assessment"
+        },
+        "data_trust_score": {
+          "score": 7,
+          "reasoning": "Research baseline only — no live verification; Aadhaar-authenticated; Source: CBSE results + school records"
+        }
+      }
+    },
+    {
+      "name": "Mukhyamantri Jan Arogya Yojana",
+      "short": "MJAY",
+      "sector": "Health",
+      "overall_validation_score": 6.1,
+      "validation_verdict": "Credible & Effective",
+      "beneficiaries_lakh": 10.0,
+      "budget_crore": 1200,
+      "target_group": "Families not covered under PMJAY",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 3.8,
+          "reasoning": "Reached 33% of target (10.0L/30L). Fills PMJAY gap but awareness is very low"
+        },
+        "beneficiary_authenticity": {
+          "score": 6.5,
+          "reasoning": "Aadhaar-verified ✓"
+        },
+        "inter_year_consistency": {
+          "score": 7,
+          "reasoning": "2020: 2L → 2024: 10L"
+        },
+        "district_distribution": {
+          "score": 8.0,
+          "reasoning": "~60/75 districts — 80% coverage"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹12,000/person; Utilization data unavailable; Benefit: Supplementary health coverage"
+        },
+        "political_usefulness": {
+          "score": 6,
+          "reasoning": "Consistent growth — not election-driven"
+        },
+        "data_trust_score": {
+          "score": 7,
+          "reasoning": "Research baseline only — no live verification; Aadhaar-authenticated; 5 years of data"
+        }
+      }
+    },
+    {
+      "name": "Rashtriya Parivarik Laabh Yojana",
+      "short": "RPLY",
+      "sector": "Social Security",
+      "overall_validation_score": 5.9,
+      "validation_verdict": "Moderately Reliable",
+      "beneficiaries_lakh": 5.0,
+      "budget_crore": 1500,
+      "target_group": "BPL families who lost primary breadwinner",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 3.2,
+          "reasoning": "Reached 33% of target (5.0L/15L). ₹30K one-time aid inadequate for family that lost breadwinner"
+        },
+        "beneficiary_authenticity": {
+          "score": 6.5,
+          "reasoning": "DBT-linked ✓"
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2018: 1L → 2024: 5L; Healthy avg growth: 34%/yr"
+        },
+        "district_distribution": {
+          "score": 8.0,
+          "reasoning": "~60/75 districts — 80% coverage"
+        },
+        "budget_efficiency": {
+          "score": 5,
+          "reasoning": "Moderate: ₹30,000/person; Utilization data unavailable; Benefit: ₹30,000 per family (on breadwinner death)"
+        },
+        "political_usefulness": {
+          "score": 6,
+          "reasoning": "Consistent growth — not election-driven; DBT reduces misuse potential; Negative media coverage"
+        },
+        "data_trust_score": {
+          "score": 6.5,
+          "reasoning": "Research baseline only — no live verification; DBT-tracked; 7 years of data"
+        }
+      }
+    },
+    {
+      "name": "Kisan Asaan Kist Yojana",
+      "short": "KAK",
+      "sector": "Agriculture",
+      "overall_validation_score": 5.9,
+      "validation_verdict": "Moderately Reliable",
+      "beneficiaries_lakh": 8.0,
+      "budget_crore": 400,
+      "target_group": "Farmers with pending electricity dues",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 3.6,
+          "reasoning": "Reached 27% of target (8.0L/30L). Band-aid — lets farmers pay in installments but doesn't reduce cost"
+        },
+        "beneficiary_authenticity": {
+          "score": 5,
+          "reasoning": ""
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2019: 2L → 2024: 8L; Healthy avg growth: 36%/yr"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹5,000/person; Utilization data unavailable; Benefit: Easy installment for electricity bills"
+        },
+        "political_usefulness": {
+          "score": 6,
+          "reasoning": "Consistent growth — not election-driven"
+        },
+        "data_trust_score": {
+          "score": 6,
+          "reasoning": "Research baseline only — no live verification; 6 years of data"
+        }
+      }
+    },
+    {
+      "name": "Mission Shakti",
+      "short": "MS",
+      "sector": "Women & Girl Child",
+      "overall_validation_score": 5.3,
+      "validation_verdict": "Moderately Reliable",
+      "beneficiaries_lakh": 50.0,
+      "budget_crore": 3146,
+      "target_group": "All women and girls of UP",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 3.8,
+          "reasoning": "Reached 10% of target (50.0L/500L). BC Sakhis providing doorstep banking, women safety awareness"
+        },
+        "beneficiary_authenticity": {
+          "score": 5,
+          "reasoning": ""
+        },
+        "inter_year_consistency": {
+          "score": 5,
+          "reasoning": "2021: 10L → 2024: 50L; Suspicious spike: 150% in one year"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹6,292/person; Utilization data unavailable; Benefit: Multi-program umbrella scheme"
+        },
+        "political_usefulness": {
+          "score": 5,
+          "reasoning": "Consistent growth — not election-driven; ⚠️ 150% spike in election year 2022; Positive independent assessment"
+        },
+        "data_trust_score": {
+          "score": 5,
+          "reasoning": "Research baseline only — no live verification"
+        }
+      }
+    },
+    {
+      "name": "Kaushal Satrang / YUVA Hub",
+      "short": "KS",
+      "sector": "Employment & Industry",
+      "overall_validation_score": 5.3,
+      "validation_verdict": "Moderately Reliable",
+      "beneficiaries_lakh": 5.0,
+      "budget_crore": 500,
+      "target_group": "Unemployed youth",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 2.7,
+          "reasoning": "Reached 20% of target (5.0L/25L). Training quality inconsistent, job outcomes not tracked"
+        },
+        "beneficiary_authenticity": {
+          "score": 5,
+          "reasoning": ""
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2019: 1L → 2024: 5L; Healthy avg growth: 39%/yr"
+        },
+        "district_distribution": {
+          "score": 6.0,
+          "reasoning": "~45/75 districts — 60% coverage"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹10,000/person; Utilization data unavailable; Benefit: Skill training across 7 programs"
+        },
+        "political_usefulness": {
+          "score": 5,
+          "reasoning": "Consistent growth — not election-driven; Negative media coverage"
+        },
+        "data_trust_score": {
+          "score": 6,
+          "reasoning": "Research baseline only — no live verification; 6 years of data"
+        }
+      }
+    },
+    {
+      "name": "Kisan Uday Yojana (Solar Pumps)",
+      "short": "KUY",
+      "sector": "Agriculture",
+      "overall_validation_score": 5.2,
+      "validation_verdict": "Moderately Reliable",
+      "beneficiaries_lakh": 1.5,
+      "budget_crore": 800,
+      "target_group": "Farmers with old diesel/electric irrigation pumps",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 2.5,
+          "reasoning": "Reached 15% of target (1.5L/10L). Minimal — only 15% of 10L pump target achieved"
+        },
+        "beneficiary_authenticity": {
+          "score": 6,
+          "reasoning": "Verified: CAG flagged delays"
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2019: 0.3L → 2024: 1.5L; Healthy avg growth: 39%/yr"
+        },
+        "district_distribution": {
+          "score": 5.3,
+          "reasoning": "~40/75 districts — 53% coverage"
+        },
+        "budget_efficiency": {
+          "score": 5,
+          "reasoning": "Moderate: ₹53,333/person; Utilization data unavailable; Benefit: Free energy-efficient pump replacement"
+        },
+        "political_usefulness": {
+          "score": 5,
+          "reasoning": "Consistent growth — not election-driven; Negative media coverage"
+        },
+        "data_trust_score": {
+          "score": 6,
+          "reasoning": "Research baseline only — no live verification; 6 years of data"
+        }
+      }
+    },
+    {
+      "name": "Sevayojan Portal (Employment Exchange)",
+      "short": "SEV",
+      "sector": "Employment & Industry",
+      "overall_validation_score": 5.1,
+      "validation_verdict": "Moderately Reliable",
+      "beneficiaries_lakh": 15.0,
+      "budget_crore": 150,
+      "target_group": "Unemployed youth seeking jobs",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 2.5,
+          "reasoning": "Reached 15% of target (15.0L/100L). Registrations ≠ placements — actual job creation questionable"
+        },
+        "beneficiary_authenticity": {
+          "score": 3,
+          "reasoning": "⚠️ HIGH duplicate risk"
+        },
+        "inter_year_consistency": {
+          "score": 8,
+          "reasoning": "2019: 3L → 2024: 15L; Healthy avg growth: 39%/yr"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 7,
+          "reasoning": "Very efficient: ₹1,000/person; Utilization data unavailable; Benefit: Job matching, employment fair access"
+        },
+        "political_usefulness": {
+          "score": 5,
+          "reasoning": "Consistent growth — not election-driven; Negative media coverage"
+        },
+        "data_trust_score": {
+          "score": 4.5,
+          "reasoning": "Research baseline only — no live verification; 6 years of data; ⚠️ High duplicate risk lowers trust"
+        }
+      }
+    },
+    {
+      "name": "Mahila Samarthya Yojana",
+      "short": "MSY",
+      "sector": "Women & Girl Child",
+      "overall_validation_score": 4.8,
+      "validation_verdict": "Moderately Reliable",
+      "beneficiaries_lakh": 2.0,
+      "budget_crore": 200,
+      "target_group": "Women seeking skill development & self-employment",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 3.3,
+          "reasoning": "Reached 20% of target (2.0L/10L). Early stage — limited data on outcomes"
+        },
+        "beneficiary_authenticity": {
+          "score": 5,
+          "reasoning": ""
+        },
+        "inter_year_consistency": {
+          "score": 4,
+          "reasoning": "2022: 0.5L → 2024: 2.0L; Suspicious spike: 140% in one year; Unusually rapid growth: 103%/yr"
+        },
+        "district_distribution": {
+          "score": 5.3,
+          "reasoning": "~40/75 districts — 53% coverage"
+        },
+        "budget_efficiency": {
+          "score": 6,
+          "reasoning": "Efficient: ₹10,000/person; Utilization data unavailable; Benefit: Skill training & entrepreneurship support"
+        },
+        "political_usefulness": {
+          "score": 6,
+          "reasoning": "Consistent growth — not election-driven"
+        },
+        "data_trust_score": {
+          "score": 5,
+          "reasoning": "Research baseline only — no live verification"
+        }
+      }
+    },
+    {
+      "name": "UP Kisan Rin Mochan Yojana (Loan Waiver)",
+      "short": "KRM",
+      "sector": "Agriculture",
+      "overall_validation_score": 4.3,
+      "validation_verdict": "Questionable",
+      "beneficiaries_lakh": 86.0,
+      "budget_crore": 36000,
+      "target_group": "Small & marginal farmers with crop loans",
+      "scrape_status": "RESEARCH_ONLY",
+      "dimensions": {
+        "policy_impact": {
+          "score": 3.4,
+          "reasoning": "Reached 37% of target (86.0L/230L). Short-term relief but no long-term farm distress fix"
+        },
+        "beneficiary_authenticity": {
+          "score": 2,
+          "reasoning": "⚠️ HIGH duplicate risk; ⚠️ multiple complaints"
+        },
+        "inter_year_consistency": {
+          "score": 5.0,
+          "reasoning": "Insufficient yearly data for trend analysis"
+        },
+        "district_distribution": {
+          "score": 9.0,
+          "reasoning": "All 75 districts covered"
+        },
+        "budget_efficiency": {
+          "score": 5,
+          "reasoning": "Moderate: ₹41,860/person; Utilization data unavailable; Benefit: Up to ₹1,00,000 loan waiver"
+        },
+        "political_usefulness": {
+          "score": 5,
+          "reasoning": "Mass reach (86.0L) — genuine welfare scale; Negative media coverage"
+        },
+        "data_trust_score": {
+          "score": 3.5,
+          "reasoning": "Research baseline only — no live verification; ⚠️ High duplicate risk lowers trust"
+        }
+      }
+    }
+  ]
+}

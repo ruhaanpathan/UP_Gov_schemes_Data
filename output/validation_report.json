@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-05-16 10:12:55",
+  "score_pct": 71.4,
+  "summary": {
+    "errors": 4,
+    "warnings": 4,
+    "passed": 20,
+    "total_checks": 28
+  },
+  "overrides_applied": {
+    "ayushman_ben_cap": 45.0
+  },
+  "checks": [
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Scraper completed successfully"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "4 pension schemes parsed"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Old Age Pension: 67.5L beneficiaries ✓"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Old Age Pension: ₹3,008/person/quarter ✓"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Old Age Pension: 21% deviation from research ✓"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Widow Pension: 26.13L beneficiaries ✓"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Widow Pension: ₹3,000/person/quarter ✓"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Widow Pension: 10% deviation from research ✓"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Divyang Pension: 11.05L beneficiaries ✓"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Divyang Pension: ₹2,999/person/quarter ✓"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Divyang Pension: 8% deviation from research ✓"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Leprosy Pension: 0.12L beneficiaries ✓"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "WARN",
+      "message": "Leprosy Pension: ₹93,000/person/quarter (expected ~₹3,000)"
+    },
+    {
+      "scraper": "SSPY",
+      "level": "PASS",
+      "message": "Grand total matches sum (0.0% diff)"
+    },
+    {
+      "scraper": "MKSY",
+      "level": "PASS",
+      "message": "Page fetched successfully"
+    },
+    {
+      "scraper": "MKSY",
+      "level": "WARN",
+      "message": "No usable beneficiary stats extracted — using research baseline"
+    },
+    {
+      "scraper": "PMAY-Rural",
+      "level": "ERROR",
+      "message": "Page fetched but parsed_data empty (JS portal needs Selenium)"
+    },
+    {
+      "scraper": "PMAY-Urban",
+      "level": "ERROR",
+      "message": "Page fetched but parsed_data empty (JS portal needs Selenium)"
+    },
+    {
+      "scraper": "ODOP",
+      "level": "ERROR",
+      "message": "Only 647 bytes received (redirect/error page)"
+    },
+    {
+      "scraper": "Ayushman",
+      "level": "PASS",
+      "message": "Scraper completed"
+    },
+    {
+      "scraper": "Ayushman",
+      "level": "WARN",
+      "message": "beneficiaries_lakh=956.82 is ENROLLED population, not treated patients. Research baseline=45L treated. Capping to research value."
+    },
+    {
+      "scraper": "Ayushman",
+      "level": "PASS",
+      "message": "Card coverage: 60.2%"
+    },
+    {
+      "scraper": "Ayushman",
+      "level": "PASS",
+      "message": "Claims/preauth ratio: 96.1%"
+    },
+    {
+      "scraper": "Ayushman",
+      "level": "PASS",
+      "message": "6,391.0 hospitals — plausible"
+    },
+    {
+      "scraper": "UP-Gov",
+      "level": "PASS",
+      "message": "Portal reached"
+    },
+    {
+      "scraper": "FCS",
+      "level": "PASS",
+      "message": "Wheat: 252,923 farmers, 12.81102 lakh MT"
+    },
+    {
+      "scraper": "FCS",
+      "level": "WARN",
+      "message": "procurement_centres == farmers (252,923) — likely regex overlap"
+    },
+    {
+      "scraper": "Scholarship",
+      "level": "ERROR",
+      "message": "All connection attempts failed (portal down)"
+    }
+  ]
+}

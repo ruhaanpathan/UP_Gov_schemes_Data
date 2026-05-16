@@ -1,13 +1,13 @@
 {
   "source": "up.gov.in",
-  "scraped_at": "2026-05-13 21:15:10.170232",
+  "scraped_at": "2026-05-16 10:12:18.721682",
   "parsed_data": {
     "wheat_procurement": {
-      "farmers": 237976.0,
-      "quantity_lakh_mt": 12.08496,
+      "farmers": 252923.0,
+      "quantity_lakh_mt": 12.81102,
       "year": "2026-27"
     },
-    "procurement_centres": 237976.0
+    "procurement_centres": 252923.0
   },
   "schemes_found": [],
   "url": "https://up.gov.in/en/page/important-government-schemes",

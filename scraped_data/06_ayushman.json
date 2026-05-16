@@ -1,17 +1,17 @@
 {
   "source": "ayushmanup.in",
-  "scraped_at": "2026-05-13 21:15:06.968303",
+  "scraped_at": "2026-05-16 10:12:15.849582",
   "parsed_data": {
     "total_beneficiaries": 95682304.0,
-    "golden_cards_issued": 56800054.0,
-    "empanelled_hospitals": 6313.0,
-    "preauth_requests": 9191580.0,
-    "claims_submitted": 8831289.0,
+    "golden_cards_issued": 57600000.0,
+    "empanelled_hospitals": 6391.0,
+    "preauth_requests": 9614580.0,
+    "claims_submitted": 9241289.0,
     "beneficiaries_lakh": 956.82,
     "beneficiaries_crore": 9.57,
-    "card_coverage_pct": 59.4
+    "card_coverage_pct": 60.2
   },
   "status": "SCRAPED",
   "url": "https://ayushmanup.in",
-  "page_size": 243987
+  "page_size": 243981
 }
